@@ -28,6 +28,14 @@ if [ ! -x .venv/bin/python ]; then
 fi
 .venv/bin/pip install -q -r requirements.txt
 
+# 5. Modelo de transcrição (641 MB, grande demais para o GitHub)
+MODELO=sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8
+if [ ! -f "modelos/$MODELO/encoder.int8.onnx" ]; then
+  mkdir -p modelos
+  curl -sSLf "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/$MODELO.tar.bz2" \
+    | tar xj -C modelos --exclude="$MODELO/test_wavs"
+fi
+
 # Deixa o python/yt-dlp/gdown do .venv disponíveis na sessão
 if [ -n "${CLAUDE_ENV_FILE:-}" ]; then
   echo "export PATH=\"$PWD/.venv/bin:\$PATH\"" >> "$CLAUDE_ENV_FILE"
