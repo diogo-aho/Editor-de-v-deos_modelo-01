@@ -57,7 +57,8 @@ na linha do tempo já cortada. Monte assim:
   - Ritmo médio: troque de cena a cada ~3–6 s; deixe respiro em momentos emocionais.
 - **Destaques na legenda:** marque `"destaque": true` em 1 palavra-chave a cada ~5–8 s.
 - **Sobreposições** (`sobreposicoes`): `destaque` (cartão com ícone lucide), `palavraAtras`
-  (palavra gigante atrás dele), `numero` (**só números que ele disse**), `correcao`
+  (palavra gigante atrás dele), `flutuante` (palavra-chave flutuando — use várias, ~1 a cada 4–6 s
+  nas cenas de rosto; `y` 0.15 = acima da cabeça, 0.53 = peito), `numero` (**só números que ele disse**), `correcao`
   ("nota do editor" quando ele fala um nome errado; a legenda continua com o que ele disse).
 - **Legenda por cena:** `"legenda": 0.72` muda a altura; `"legenda": "esconder"` quando a animação
   já mostra as palavras. Gravação aberta (corpo inteiro): use `orador.escalaBase` (~1.3–1.6) e
@@ -68,8 +69,8 @@ na linha do tempo já cortada. Monte assim:
 - **Música** (`musicas`): faixas do Artlist em `public/musicas/`. Troque a faixa quando a cena
   muda de clima. Volume ~0,12 (a voz manda). Assunto energético: faixa mais forte.
 - **Efeitos:** transições e entradas de animação já ganham som automático; extras em `efeitos`.
-- `stories`: trecho de 10–15 s mais forte. `capa`: foto escolhida pelo Diogo + título curto
-  (palavras dele). `carrossel`: 3–6 páginas com os pontos principais.
+- `capa`: foto escolhida pelo Diogo + título curto (palavras dele). `stories` e `carrossel`
+  só quando ele pedir.
 - `tema`/`clima`: escolha conforme as imagens do projeto (escuro/claro, quente/neutro).
 
 ## 4. Conferir antes de renderizar
@@ -84,8 +85,8 @@ nada importante no topo/base/lateral direita, nenhuma palavra cortada.
 ## 5. Renderizar e entregar
 
 ```bash
-python scripts/entregar.py <nome> --formatos reels,stories            # padrão
-python scripts/entregar.py <nome> --formatos reels,feed,youtube,stories
+python scripts/entregar.py <nome>                                      # padrão: só o Reels (+ capa)
+python scripts/entregar.py <nome> --formatos reels,feed,youtube,stories --carrossel   # só se ele pedir
 ```
 Gera em `out/<nome>/`: os vídeos, `capa.png` (e `capa-youtube.png`) e `carrossel-N.png`.
 Vídeos acima de 30 MB ganham uma cópia `*-para-postar.mp4` (<30 MB): é ela que se envia na conversa (limite de 30 MB).

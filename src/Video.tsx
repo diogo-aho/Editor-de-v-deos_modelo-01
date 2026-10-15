@@ -78,12 +78,12 @@ const Assinatura: React.FC<{ roteiro: Roteiro }> = ({ roteiro }) => {
           style={{ width: base * 0.17, opacity: surge(0.25) * 0.95, transform: `translateY(${(1 - surge(0.25)) * 16}px)` }}
         />
       ) : (
-        <div style={{ width: base * 0.12 * surge(0.25), height: 2, background: cores.madeira }} />
+        <div style={{ width: base * 0.12 * surge(0.25), height: 2, background: cores.lima }} />
       )}
-      <div style={{ fontFamily: fontes.destaque, fontWeight: 600, fontSize: base * 0.075, color: cores.brancoQuente, marginTop: base * 0.05, opacity: surge(0.6) }}>
+      <div style={{ fontFamily: fontes.destaque, fontWeight: 600, fontSize: base * 0.075, color: cores.brancoMineral, marginTop: base * 0.05, opacity: surge(0.6) }}>
         {NOME}
       </div>
-      <div style={{ fontFamily: fontes.texto, fontWeight: 500, fontSize: base * 0.03, letterSpacing: "0.28em", color: cores.areia, marginTop: base * 0.018, opacity: surge(0.9) }}>
+      <div style={{ fontFamily: fontes.texto, fontWeight: 500, fontSize: base * 0.03, letterSpacing: "0.28em", color: cores.pedraClara, marginTop: base * 0.018, opacity: surge(0.9) }}>
         {ARROBA.toUpperCase()}
       </div>
     </AbsoluteFill>

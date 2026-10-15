@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, Easing, interpolate, random, useCurrentFrame } from "remotion";
 import { useArea } from "./area";
 import { fontes, paleta, SUAVE, type Clima, type Tema } from "../marca";
-import { Filme, Grafirmaliza, PortasSensoriais, Vinil } from "./eixoz";
+import { Aroma, Escrita, Filme, Grafirmaliza, PortasSensoriais, Vinil } from "./eixoz";
 
 // Animações feitas sob medida. Cada vídeo pode ganhar novas: crie aqui e registre em ANIMACOES.
 // Regra: nada de número ou dado inventado. Só o que o Diogo disse ou enviou.
@@ -104,4 +104,6 @@ export const ANIMACOES: Record<string, React.FC<PropsAnimacao>> = {
   filme: Filme,
   portasSensoriais: PortasSensoriais,
   vinil: Vinil,
+  escrita: Escrita,
+  aroma: Aroma,
 };

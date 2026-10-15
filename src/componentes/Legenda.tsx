@@ -4,7 +4,7 @@ import { fontes, formatoDe, SUAVE } from "../marca";
 import type { Palavra } from "../tipos";
 
 // Legenda clássica do Diogo:
-// - uma linha de 2-3 palavras surge; quando surge a próxima, a de cima sobe e fica mais fraca;
+// - uma linha só, de 2-3 palavras; quando a próxima surge, a anterior sai (sem segunda linha);
 // - letra branca; palavras de destaque em serifada, um pouco mais brilhantes (sem acender demais).
 
 type Linha = { palavras: Palavra[]; inicio: number; fim: number };
@@ -89,7 +89,7 @@ export const Legenda: React.FC<{
   const { fps, width, height } = useVideoConfig();
   const t = frame / fps;
   const formato = formatoDe(width, height);
-  const tamanho = formato === "horizontal" ? 54 : formato === "feed" ? 58 : 66;
+  const tamanho = formato === "horizontal" ? 58 : formato === "feed" ? 64 : 74;
   const alturaLinha = tamanho * 1.75;
   const linhas = React.useMemo(() => montarLinhas(palavras), [palavras]);
   const y = posicaoY(t);
@@ -99,7 +99,8 @@ export const Legenda: React.FC<{
 
   const atual = linhas.findLastIndex((l) => l.inicio <= t + 0.02);
   if (atual < 0) return null;
-  const visiveis = [atual - 2, atual - 1, atual].filter((i) => i >= 0);
+  // uma linha só: a anterior sai rápido (sobe um pouco e some) enquanto a nova entra
+  const visiveis = [atual - 1, atual].filter((i) => i >= 0);
   const progresso = (desde: number | undefined) =>
     desde === undefined ? 0 : Easing.bezier(...SUAVE)(Math.min(1, Math.max(0, (t - desde) / ENTRA)));
 
@@ -109,16 +110,14 @@ export const Legenda: React.FC<{
         const linha = linhas[i];
         const proxima = linhas[i + 1];
         const entrada = progresso(linha.inicio);
-        // quando a próxima linha entra, esta sobe e enfraquece; quando entra a seguinte, ela sai
-        const subida = progresso(proxima?.inicio);
-        const saiPorCima = progresso(linhas[i + 2]?.inicio);
+        const sai = proxima ? Easing.bezier(...SUAVE)(Math.min(1, Math.max(0, (t - proxima.inicio) / 0.14))) : 0;
         // se a fala pausa (nada vem logo depois), a linha se apaga sozinha
         const pausaLonga = !proxima || proxima.inicio - linha.fim > SEGURA;
         const apaga = pausaLonga
           ? interpolate(t, [linha.fim + SEGURA, linha.fim + SEGURA + 0.25], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })
           : 1;
-        const opacidade = entrada * apaga * interpolate(subida, [0, 1], [1, 0.38]) * (1 - saiPorCima);
-        const deslocamento = (1 - entrada) * 22 - subida * alturaLinha - saiPorCima * alturaLinha * 0.5;
+        const opacidade = entrada * apaga * (1 - sai);
+        const deslocamento = (1 - entrada) * 18 - sai * 26;
         if (opacidade <= 0.001) return null;
         return (
           <div

@@ -29,12 +29,12 @@ Para editar um vídeo, siga a skill **`editar-video`** (`.claude/skills/editar-v
 
 | Composição | Tamanho | Uso | Duração |
 |---|---|---|---|
-| `Reels` (**principal**) | 1080x1920 | Reels, TikTok, Shorts | até 90 s |
-| `YouTube` | 1920x1080 | YouTube | ~10 min |
-| `Feed` | 1080x1350 | feed Instagram/LinkedIn (reaproveita o Reels) | igual ao Reels |
-| `Stories` | 1080x1920 | versão curta (trecho `stories` do roteiro) | 10–15 s |
+| `Reels` (**principal — entrega padrão**) | 1080x1920 | Reels, TikTok, Shorts | até 90 s |
 | `Capa` / `CapaYouTube` | still | capa: foto enviada pelo Diogo + textos | — |
-| `Carrossel` | still 1080x1350 | pontos principais do vídeo (prop `pagina`) | — |
+| `YouTube` | 1920x1080 | YouTube — só quando pedir | ~10 min |
+| `Feed` | 1080x1350 | feed Instagram/LinkedIn — só quando pedir | igual ao Reels |
+| `Stories` | 1080x1920 | versão curta — só quando pedir | 10–15 s |
+| `Carrossel` | still 1080x1350 | pontos principais — só quando pedir (`entregar.py --carrossel`) | — |
 
 ## Como ele grava
 
@@ -49,12 +49,15 @@ projetos e vídeos à parte. O iPhone grava em HDR: `preparar.py` converte para 
 - Ele **some** da tela quando o que vai ser mostrado é muito importante.
 - **Animações ao redor dele:** flutuam, passam e **atravessam por trás** (`palavraAtras`, usa o
   recorte da silhueta) em números, dados e destaques que não pedem uma imagem.
-- **Edição:** animações sob medida, cortes e zoom (frases fortes), imagens de apoio, textos
-  grandes, prints. **Ritmo médio**, com respiro quando a fala pedir.
+- **Edição:** animações sob medida e **criativas** (objetos que se desenham, sílabas que voam, partículas,
+  cadernos que se escrevem…), cortes e zoom (frases fortes), imagens de apoio, textos grandes, prints.
+  **Muitas palavras-chave flutuando** (`flutuante`): acima da cabeça ou na altura do peito, nunca no rosto.
+  **Ritmo médio**, com respiro quando a fala pedir.
 
 ## Legenda
 
-- Clássica e simples: surge **uma linha de 2–3 palavras**; quando surge a próxima, a de cima sobe e fica mais fraca.
+- Clássica e simples: **uma linha só**, de 2–3 palavras; quando a próxima surge, a anterior sai (sem segunda linha).
+  Tamanho 74 px no vertical.
 - **Letra branca** (Manrope). Palavras de **destaque**: serifada (Cormorant Garamond itálico), um pouco mais brilhante, sem acender demais.
 - **Posição muda com a cena:** rosto = altura do peito; tela dividida = na parte de baixo da ilustração, logo acima do fio (rosto livre); tela cheia = terço de baixo (acima da zona dos botões); texto grande = sem legenda.
 
@@ -68,10 +71,28 @@ projetos e vídeos à parte. O iPhone grava em HDR: `preparar.py` converte para 
 
 ## Visual
 
-- **Paleta** (`src/marca.ts`): café `#2B211B`, grafite `#2E2F31`, chumbo `#5E6063`, oliva `#5B5A3F`,
-  madeira `#A7744A`, cinza claro `#C8C8C5`, areia `#D9C8B0`, névoa `#ECECEA`, branco quente `#F4EFE7`.
-- **Tema** varia por vídeo: escuro ou claro, clima quente (café/madeira/areia) ou neutro (grafite/cinzas/névoa),
-  conforme o assunto e as imagens do projeto.
+### Paleta oficial (`src/marca.ts`) — essência: luxo silencioso + natureza + arquitetura + contraste contemporâneo
+
+| Cor | Código | Uso | Função |
+|---|---|---|---|
+| Branco Mineral | `#F5F2EB` | 45% | base: fundos claros, respiro, capas minimalistas |
+| Pedra Clara | `#D8D2C8` | 20% | neutro secundário: fundos de apoio, divisórias, contraste suave |
+| Grafite Profundo | `#2F3130` | 20% | contraste e autoridade: textos, títulos, fundos escuros |
+| Taupe Amadeirado | `#8A7666` | 10% | apoio quente: detalhes, blocos de apoio, fundos complementares |
+| Lima Sofisticado | `#C7D94E` | 5% | destaque: filetes, ícones, palavras-chave, numeração, pontos de conexão |
+
+- **Os neutros dominam; o lima só marca.** A marca deve parecer sofisticada, silenciosa, natural e contemporânea.
+- **Evitar:** fundos grandes em lima, excesso de verde, lima com cara de neon, muitos destaques ao mesmo tempo,
+  logo preto muito grande sobre foto premium.
+- **Combinações:** branco mineral + texto grafite (institucional) · pedra + texto grafite (arquitetônico) ·
+  grafite + texto branco mineral + detalhes lima (contraste premium) · taupe + texto branco mineral (acolhedor) ·
+  branco + texto grafite + detalhe lima (assinatura).
+- **Fórmulas:** imóvel premium = imagem protagonista, texto branco/grafite, lima só em filetes e pontos, logo
+  em marca d'água ou branco sutil · conceitual = fundo grafite, texto branco, detalhes lima, linhas curvas e
+  pontos de conexão · institucional = fundo branco/pedra, texto grafite, taupe de apoio, lima em acentos.
+- **Logo sobre imagens de imóveis:** sutil — marca d'água, branco sobre vidro, textura tonal.
+
+- **Tema** varia por vídeo: escuro (grafite) ou claro (branco mineral / pedra), conforme o assunto e as imagens.
 - **Letras:** Manrope (texto) + Cormorant Garamond (destaques). Legíveis, nada enfeitado.
 - Sem mascote. Movimentos suaves (`SUAVE` em `marca.ts`), nunca tremidos ou elásticos.
 
@@ -84,9 +105,9 @@ projetos e vídeos à parte. O iPhone grava em HDR: `preparar.py` converte para 
 
 ## Entregas de cada vídeo
 
+- **Só o Reels** (entrega padrão). Stories, feed, YouTube e carrossel apenas quando o Diogo pedir.
 - **Capa:** o Diogo manda a foto/imagem; o Claude cria os textos por cima (`Capa`).
 - **Legenda do post** e **mensagem da DM:** dependem do vídeo — **pergunte ao Diogo** a cada vídeo.
-- **Carrossel** com os pontos principais e **versão curta para Stories**.
 
 ## Ambiente técnico
 
@@ -105,4 +126,9 @@ Formato: `AAAA-MM-DD — regra — (vídeo de origem)`
 - 2026-10-15 — Toda mensagem para o Diogo é em português, sem exceção (ele não lê inglês). — (eixoz-01)
 - 2026-10-15 — Quando o Diogo falar um nome errado, a legenda mantém o que ele disse e entra uma "nota do editor" (sobreposição `correcao`) corrigindo com leveza e um toque de humor. Ex.: "MindVision" → "Mind Movie". — (eixoz-01)
 - 2026-10-15 — Vídeos da Eixoz: assinatura "pessoal" (sem logo da Aho) até a identidade da Eixoz ficar pronta. Podem ter mais animações sob medida. — (eixoz-01)
+- 2026-10-15 — Entregar só o Reels: sem carrossel e sem versão para Stories, a não ser que ele peça. — (eixoz-01)
+- 2026-10-15 — Legenda com uma linha só (sem a linha anterior esmaecida), um pouco maior (74 px). — (eixoz-01)
+- 2026-10-15 — Mais palavras-chave flutuando ao redor dele, grandes e legíveis, fora do rosto. — (eixoz-01)
+- 2026-10-15 — Animações mais criativas: objetos e textos que se constroem, viajam e se conectam. — (eixoz-01)
+- 2026-10-15 — Nova paleta oficial (branco mineral, pedra clara, grafite, taupe, lima); lima só para marcar. — (eixoz-01)
 - 2026-10-15 — Vídeo pode passar de 90 s quando o Diogo fala sem pausas: manter inteiro, não cortar conteúdo sem ele pedir. — (eixoz-01)

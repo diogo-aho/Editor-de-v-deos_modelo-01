@@ -1,7 +1,7 @@
 import * as Icones from "lucide-react";
 import React from "react";
 import { AbsoluteFill, Easing, interpolate, useVideoConfig } from "remotion";
-import { cores, fontes, formatoDe, paleta, SUAVE, zonaSegura, type Clima, type Tema } from "../marca";
+import { cores, fontes, rgba, formatoDe, paleta, SUAVE, zonaSegura, type Clima, type Tema } from "../marca";
 import type { Sobreposicao } from "../tipos";
 import { useTempo } from "./Orador";
 
@@ -35,7 +35,7 @@ export const PalavraAtras: React.FC<{
           fontWeight: 600,
           fontSize: tamanho,
           letterSpacing: "-0.01em",
-          color: cores.brancoQuente,
+          color: cores.brancoMineral,
           opacity: vis * 0.94,
           transform: `translateX(${(0.5 - p) * width * 0.22}px)`,
           textShadow: "0 10px 50px rgba(0,0,0,0.35)",
@@ -75,8 +75,8 @@ const Destaque: React.FC<{ item: Extract<Sobreposicao, { tipo: "destaque" }>; te
         gap: base * 0.026,
         padding: `${base * 0.028}px ${base * 0.04}px`,
         borderRadius: base * 0.03,
-        background: "rgba(30, 28, 26, 0.42)",
-        border: "1px solid rgba(244, 239, 231, 0.22)",
+        background: "rgba(40, 42, 41, 0.42)",
+        border: "1px solid rgba(245, 242, 235, 0.22)",
         backdropFilter: "blur(14px)",
         opacity: vis,
         transform: `translateY(${(1 - vis) * 24}px) scale(${0.96 + 0.04 * vis})`,
@@ -84,8 +84,59 @@ const Destaque: React.FC<{ item: Extract<Sobreposicao, { tipo: "destaque" }>; te
         whiteSpace: "nowrap",
       }}
     >
-      {Icone && <Icone size={base * 0.058} color={cores.areia} strokeWidth={1.5} />}
-      <span style={{ fontFamily: fontes.texto, fontWeight: 600, fontSize: base * 0.042, color: cores.brancoQuente, letterSpacing: "-0.01em" }}>
+      {Icone && <Icone size={base * 0.058} color={cores.pedraClara} strokeWidth={1.5} />}
+      <span style={{ fontFamily: fontes.texto, fontWeight: 600, fontSize: base * 0.042, color: cores.brancoMineral, letterSpacing: "-0.01em" }}>
+        {item.texto}
+      </span>
+    </div>
+  );
+};
+
+// Palavra-chave flutuante: serifada, com ponto e filete em lima. Surge como se fosse escrita.
+// acima da cabeça ou na altura do peito: nunca na altura do rosto
+const ALTURAS = [0.15, 0.53, 0.17, 0.55];
+const Flutuante: React.FC<{ item: Extract<Sobreposicao, { tipo: "flutuante" }>; indice: number }> = ({ item, indice }) => {
+  const { width, height } = useVideoConfig();
+  const t = useTempo();
+  const dt = t - item.inicio;
+  const vis = entradaSaida(t, item.inicio, item.fim, 0.35);
+  if (vis <= 0) return null;
+  const formato = formatoDe(width, height);
+  const z = zonaSegura(formato);
+  const base = Math.min(width, height);
+  const esquerda = (item.lado ?? (indice % 2 ? "direita" : "esquerda")) === "esquerda";
+  const y = item.y ?? ALTURAS[indice % ALTURAS.length];
+  const revela = suave(Math.min(1, Math.max(0, dt / 0.55)));
+  const deriva = Math.sin(dt * 1.3 + indice) * 6;
+  const saiu = 1 - vis;
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: height * y + deriva - saiu * 14,
+        ...(esquerda ? { left: z.esquerda + base * 0.01 } : { right: z.direita - base * 0.03 }),
+        display: "flex",
+        flexDirection: esquerda ? "row" : "row-reverse",
+        alignItems: "center",
+        gap: base * 0.016,
+        opacity: vis,
+        filter: saiu > 0.01 ? `blur(${saiu * 5}px)` : undefined,
+        whiteSpace: "nowrap",
+      }}
+    >
+      <div style={{ width: base * 0.012, height: base * 0.012, borderRadius: "50%", background: cores.lima, boxShadow: `0 0 10px ${rgba.lima(0.5)}` }} />
+      <div style={{ width: base * 0.05 * revela, height: 1.5, background: cores.lima, opacity: 0.85 }} />
+      <span
+        style={{
+          fontFamily: fontes.destaque,
+          fontStyle: "italic",
+          fontWeight: 600,
+          fontSize: base * 0.1,
+          color: cores.brancoMineral,
+          textShadow: "0 4px 26px rgba(0,0,0,0.7), 0 0 3px rgba(0,0,0,0.45)",
+          clipPath: esquerda ? `inset(-20% ${100 - revela * 100}% -20% -5%)` : `inset(-20% -5% -20% ${100 - revela * 100}%)`,
+        }}
+      >
         {item.texto}
       </span>
     </div>
@@ -113,8 +164,8 @@ const Correcao: React.FC<{ item: Extract<Sobreposicao, { tipo: "correcao" }> }> 
         translate: "-50% 0",
         padding: `${base * 0.035}px ${base * 0.06}px`,
         borderRadius: base * 0.035,
-        background: "rgba(30, 28, 26, 0.5)",
-        border: "1px solid rgba(244, 239, 231, 0.22)",
+        background: "rgba(40, 42, 41, 0.5)",
+        border: "1px solid rgba(245, 242, 235, 0.22)",
         backdropFilter: "blur(14px)",
         boxShadow: "0 18px 50px rgba(0,0,0,0.3)",
         textAlign: "center",
@@ -123,16 +174,16 @@ const Correcao: React.FC<{ item: Extract<Sobreposicao, { tipo: "correcao" }> }> 
         transform: `translateY(${(1 - vis) * 20}px)`,
       }}
     >
-      <div style={{ fontFamily: fontes.texto, fontWeight: 600, fontSize: base * 0.022, letterSpacing: "0.3em", color: cores.madeira, marginBottom: base * 0.018 }}>
+      <div style={{ fontFamily: fontes.texto, fontWeight: 600, fontSize: base * 0.022, letterSpacing: "0.3em", color: cores.lima, marginBottom: base * 0.018 }}>
         {(item.nota ?? "nota do editor").toUpperCase()}
       </div>
-      <div style={{ position: "relative", display: "inline-block", fontFamily: fontes.texto, fontWeight: 600, fontSize: base * 0.048, color: cores.areia, opacity: 1 - 0.45 * risco, transform: `rotate(${balanca}deg)` }}>
+      <div style={{ position: "relative", display: "inline-block", fontFamily: fontes.texto, fontWeight: 600, fontSize: base * 0.048, color: cores.pedraClara, opacity: 1 - 0.45 * risco, transform: `rotate(${balanca}deg)` }}>
         {item.errado}
-        <div style={{ position: "absolute", left: "-4%", top: "50%", width: `${108 * risco}%`, height: 5, background: cores.madeira, transform: "rotate(-4deg)", borderRadius: 3, boxShadow: "0 0 8px rgba(167,116,74,0.6)" }} />
+        <div style={{ position: "absolute", left: "-4%", top: "50%", width: `${108 * risco}%`, height: 5, background: cores.lima, transform: "rotate(-4deg)", borderRadius: 3, boxShadow: "0 0 8px rgba(199, 217, 78,0.6)" }} />
       </div>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: base * 0.02, marginTop: base * 0.012, opacity: certo, transform: `translateY(${(1 - certo) * 14}px)` }}>
-        <span style={{ fontFamily: fontes.destaque, fontStyle: "italic", fontWeight: 600, fontSize: base * 0.085, color: cores.brancoQuente }}>{item.certo}</span>
-        <Icones.Check size={base * 0.05} color={cores.madeira} strokeWidth={2.2} style={{ opacity: check, transform: `scale(${0.6 + 0.4 * check})` }} />
+        <span style={{ fontFamily: fontes.destaque, fontStyle: "italic", fontWeight: 600, fontSize: base * 0.085, color: cores.brancoMineral }}>{item.certo}</span>
+        <Icones.Check size={base * 0.05} color={cores.lima} strokeWidth={2.2} style={{ opacity: check, transform: `scale(${0.6 + 0.4 * check})` }} />
       </div>
     </div>
   );
@@ -151,13 +202,13 @@ const Numero: React.FC<{ item: Extract<Sobreposicao, { tipo: "numero" }>; tema: 
   return (
     <AbsoluteFill style={{ alignItems: "center", pointerEvents: "none" }}>
       <div style={{ position: "absolute", top: height * 0.26, textAlign: "center", opacity: vis, transform: `translateY(${(1 - vis) * 20}px)` }}>
-        <div style={{ fontFamily: fontes.destaque, fontWeight: 600, fontSize: base * 0.2, color: cores.brancoQuente, lineHeight: 1, textShadow: "0 8px 40px rgba(0,0,0,0.4)" }}>
+        <div style={{ fontFamily: fontes.destaque, fontWeight: 600, fontSize: base * 0.2, color: cores.brancoMineral, lineHeight: 1, textShadow: "0 8px 40px rgba(0,0,0,0.4)" }}>
           {item.prefixo}
           {valor}
           {item.sufixo}
         </div>
         {item.rotulo && (
-          <div style={{ fontFamily: fontes.texto, fontWeight: 600, fontSize: base * 0.028, letterSpacing: "0.3em", textTransform: "uppercase", color: c.detalhe === cores.madeira ? cores.areia : c.detalhe, marginTop: base * 0.02 }}>
+          <div style={{ fontFamily: fontes.texto, fontWeight: 600, fontSize: base * 0.028, letterSpacing: "0.3em", textTransform: "uppercase", color: c.detalhe === cores.lima ? cores.pedraClara : c.detalhe, marginTop: base * 0.02 }}>
             {item.rotulo}
           </div>
         )}
@@ -172,6 +223,8 @@ export const Sobreposicoes: React.FC<{ itens: Sobreposicao[]; tema: Tema; clima:
     {itens.map((item, i) =>
       item.tipo === "destaque" ? (
         <Destaque key={i} item={item} tema={tema} clima={clima} />
+      ) : item.tipo === "flutuante" ? (
+        <Flutuante key={i} item={item} indice={itens.slice(0, i).filter((x) => x.tipo === "flutuante").length} />
       ) : item.tipo === "correcao" ? (
         <Correcao key={i} item={item} />
       ) : item.tipo === "numero" ? (

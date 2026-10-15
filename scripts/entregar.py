@@ -1,6 +1,8 @@
 """Renderiza todas as entregas de um vídeo.
 
-Uso: python scripts/entregar.py <nome> [--formatos reels,feed,youtube,stories] [--sem-capa] [--sem-carrossel]
+Uso: python scripts/entregar.py <nome> [--formatos reels,feed,youtube,stories] [--sem-capa] [--carrossel]
+
+Padrão: só o Reels (+ capa, se o roteiro tiver). Stories, feed, YouTube e carrossel só quando o Diogo pedir.
 
 Saída em out/<nome>/: reels.mp4, feed.mp4, youtube.mp4, stories.mp4, capa.png, carrossel-1.png...
 """
@@ -19,9 +21,9 @@ def remotion(*args):
 
 ap = argparse.ArgumentParser()
 ap.add_argument("nome")
-ap.add_argument("--formatos", default="reels,stories")
+ap.add_argument("--formatos", default="reels")
 ap.add_argument("--sem-capa", action="store_true")
-ap.add_argument("--sem-carrossel", action="store_true")
+ap.add_argument("--carrossel", action="store_true", help="gera o carrossel (só quando o Diogo pedir)")
 a = ap.parse_args()
 
 roteiro_arq = RAIZ / "public" / "projetos" / a.nome / "roteiro.json"
@@ -39,7 +41,7 @@ if roteiro.get("capa") and not a.sem_capa:
     if "youtube" in a.formatos:
         remotion("still", "src/index.ts", "CapaYouTube", str(saida / "capa-youtube.png"), props)
 
-if roteiro.get("carrossel") and not a.sem_carrossel:
+if roteiro.get("carrossel") and a.carrossel:
     for i in range(len(roteiro["carrossel"])):
         with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as tmp:
             json.dump({**roteiro, "pagina": i}, tmp, ensure_ascii=False)

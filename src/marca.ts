@@ -1,38 +1,55 @@
 // Identidade visual do Diogo Carvalho (@diogo.aho) — Aho Imóveis.
 // Luxo silencioso: valor, autoridade e confiança. Nada chamativo.
 
+// Paleta oficial (revisada em 2026-10-15). Proporção: 45% branco mineral, 20% pedra clara,
+// 20% grafite profundo, 10% taupe amadeirado, 5% lima sofisticado.
+// Os neutros dominam; o LIMA só marca: filetes, ícones, palavras-chave, numeração, pontos de conexão.
+// Evitar: fundos grandes em lima, excesso de verde, lima com cara de neon, muitos destaques juntos.
 export const cores = {
-  cafe: "#2B211B",
-  grafite: "#2E2F31",
-  chumbo: "#5E6063",
-  oliva: "#5B5A3F",
-  madeira: "#A7744A",
-  cinzaClaro: "#C8C8C5",
-  areia: "#D9C8B0",
-  nevoa: "#ECECEA",
-  brancoQuente: "#F4EFE7",
+  brancoMineral: "#F5F2EB", // base: leveza, respiro, luz
+  pedraClara: "#D8D2C8", // neutro secundário: materialidade, arquitetura
+  grafite: "#2F3130", // contraste e autoridade: textos, fundos escuros
+  taupe: "#8A7666", // apoio quente: acolhimento, interiores, textura
+  lima: "#C7D94E", // destaque: só para marcar
 } as const;
 
+// rgba das cores, para brilhos e transparências
+export const rgba = {
+  brancoMineral: (a: number) => `rgba(245, 242, 235, ${a})`,
+  pedraClara: (a: number) => `rgba(216, 210, 200, ${a})`,
+  grafite: (a: number) => `rgba(47, 49, 48, ${a})`,
+  taupe: (a: number) => `rgba(138, 118, 102, ${a})`,
+  lima: (a: number) => `rgba(199, 217, 78, ${a})`,
+};
+
 export type Tema = "escuro" | "claro";
+// quente = taupe como apoio; neutro = pedra/grafite puros
 export type Clima = "quente" | "neutro";
 
-// Combinações de fundo/texto/detalhe para cada tema e clima.
+// Combinações aprovadas de fundo e texto:
+//  escuro: fundo grafite + texto branco mineral + detalhes lima (contraste premium)
+//  claro neutro: fundo branco mineral + texto grafite + detalhe lima
+//  claro quente: fundo pedra clara + texto grafite + taupe de apoio
 export const paleta = (tema: Tema, clima: Clima) => {
   if (tema === "escuro") {
     return {
-      fundo: clima === "quente" ? cores.cafe : cores.grafite,
-      texto: cores.brancoQuente,
-      textoSuave: clima === "quente" ? cores.areia : cores.cinzaClaro,
-      detalhe: cores.madeira,
-      cartao: "rgba(244, 239, 231, 0.10)",
+      fundo: cores.grafite,
+      brilho: clima === "quente" ? rgba.taupe(0.35) : rgba.pedraClara(0.12),
+      texto: cores.brancoMineral,
+      textoSuave: cores.pedraClara,
+      apoio: cores.taupe,
+      detalhe: cores.lima,
+      cartao: rgba.brancoMineral(0.08),
     };
   }
   return {
-    fundo: clima === "quente" ? cores.areia : cores.nevoa,
-    texto: clima === "quente" ? cores.cafe : cores.grafite,
-    textoSuave: clima === "quente" ? cores.oliva : cores.chumbo,
-    detalhe: clima === "quente" ? cores.madeira : cores.oliva,
-    cartao: "rgba(43, 33, 27, 0.08)",
+    fundo: clima === "quente" ? cores.pedraClara : cores.brancoMineral,
+    brilho: clima === "quente" ? rgba.brancoMineral(0.5) : rgba.pedraClara(0.6),
+    texto: cores.grafite,
+    textoSuave: cores.taupe,
+    apoio: cores.taupe,
+    detalhe: cores.lima,
+    cartao: rgba.grafite(0.06),
   };
 };
 

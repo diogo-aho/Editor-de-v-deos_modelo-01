@@ -11,19 +11,19 @@ export const Capa: React.FC<Roteiro> = ({ capa, clima }) => {
   const base = Math.min(width, height);
   if (!capa) return <AbsoluteFill style={{ background: paleta("escuro", clima).fundo }} />;
   return (
-    <AbsoluteFill style={{ background: cores.cafe }}>
+    <AbsoluteFill style={{ background: cores.grafite }}>
       <Img src={staticFile(capa.foto)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: capa.foco ?? "50% 30%" }} />
-      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.05) 35%, rgba(20,16,13,0.82) 78%, rgba(20,16,13,0.92) 100%)" }} />
+      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.05) 35%, rgba(30, 32, 31,0.82) 78%, rgba(30, 32, 31,0.92) 100%)" }} />
       <div style={{ position: "absolute", left: z.esquerda + 20, right: z.direita + 20, bottom: z.base + 10 }}>
-        <div style={{ fontFamily: fontes.destaque, fontWeight: 600, fontSize: base * 0.11, lineHeight: 1.02, color: cores.brancoQuente, whiteSpace: "pre-line" }}>
+        <div style={{ fontFamily: fontes.destaque, fontWeight: 600, fontSize: base * 0.11, lineHeight: 1.02, color: cores.brancoMineral, whiteSpace: "pre-line" }}>
           {capa.titulo}
         </div>
         {capa.subtitulo && (
-          <div style={{ fontFamily: fontes.texto, fontWeight: 500, fontSize: base * 0.036, color: cores.areia, marginTop: base * 0.03, lineHeight: 1.35 }}>
+          <div style={{ fontFamily: fontes.texto, fontWeight: 500, fontSize: base * 0.036, color: cores.pedraClara, marginTop: base * 0.03, lineHeight: 1.35 }}>
             {capa.subtitulo}
           </div>
         )}
-        <div style={{ width: base * 0.12, height: 2, background: cores.madeira, marginTop: base * 0.045 }} />
+        <div style={{ width: base * 0.12, height: 2, background: cores.lima, marginTop: base * 0.045 }} />
       </div>
     </AbsoluteFill>
   );

@@ -98,7 +98,7 @@ export const CenaDividida: React.FC<Comum & { cena: Extract<Cena, { tipo: "divid
       <div
         style={{
           position: "absolute",
-          background: cores.madeira,
+          background: cores.lima,
           opacity: 0.85,
           ...(horizontal
             ? { left: "50%", top: 0, width: 2, height: `${abre * 100}%` }
@@ -135,7 +135,7 @@ export const CenaTelaCheia: React.FC<Comum & { cena: Extract<Cena, { tipo: "tela
             fontSize: height * 0.017,
             letterSpacing: "0.32em",
             textTransform: "uppercase",
-            color: cores.brancoQuente,
+            color: cores.brancoMineral,
             opacity: surge * 0.9,
           }}
         >

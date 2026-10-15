@@ -1571,16 +1571,30 @@
     {
       "tipo": "rosto",
       "inicio": 9.85,
-      "fim": 17.6,
+      "fim": 10.95,
       "orador": {
         "escalaBase": 1.45
+      }
+    },
+    {
+      "tipo": "dividida",
+      "inicio": 10.95,
+      "fim": 17.6,
+      "animacao": "escrita",
+      "legenda": 0.5,
+      "orador": {
+        "escalaBase": 1.0,
+        "foco": "47% 30%"
       },
-      "zooms": [
-        {
-          "em": 15.6,
-          "escala": 1.12,
-          "ate": 17.6
-        }
+      "tempos": [
+        11.07,
+        13.65,
+        15.8
+      ],
+      "palavras": [
+        "Gratidão",
+        "Afirmação",
+        "Visualização"
       ]
     },
     {
@@ -1620,6 +1634,11 @@
       "inicio": 35.87,
       "fim": 40.68,
       "animacao": "portasSensoriais",
+      "legenda": 0.5,
+      "orador": {
+        "escalaBase": 1.0,
+        "foco": "47% 30%"
+      },
       "tempos": [
         1000000000.0,
         1000000000.0,
@@ -1627,12 +1646,7 @@
         1000000000.0,
         1000000000.0,
         39.8
-      ],
-      "orador": {
-        "escalaBase": 1.0,
-        "foco": "47% 30%"
-      },
-      "legenda": 0.5
+      ]
     },
     {
       "tipo": "rosto",
@@ -1647,18 +1661,18 @@
       "inicio": 47.02,
       "fim": 53.32,
       "animacao": "portasSensoriais",
+      "legenda": 0.5,
+      "orador": {
+        "escalaBase": 1.0,
+        "foco": "47% 30%"
+      },
       "tempos": [
         47.3,
         47.6,
         51.8,
         1000000000.0,
         1000000000.0
-      ],
-      "orador": {
-        "escalaBase": 1.0,
-        "foco": "47% 30%"
-      },
-      "legenda": 0.5
+      ]
     },
     {
       "tipo": "rosto",
@@ -1688,17 +1702,17 @@
       "inicio": 65.04,
       "fim": 70.94,
       "animacao": "vinil",
+      "legenda": 0.5,
+      "orador": {
+        "escalaBase": 1.0,
+        "foco": "47% 30%"
+      },
       "tempos": [
         67.3
       ],
       "palavras": [
         "Músicas de quando você era criança"
-      ],
-      "orador": {
-        "escalaBase": 1.0,
-        "foco": "47% 30%"
-      },
-      "legenda": 0.5
+      ]
     },
     {
       "tipo": "rosto",
@@ -1716,8 +1730,22 @@
       ]
     },
     {
-      "tipo": "rosto",
+      "tipo": "dividida",
       "inicio": 76.9,
+      "fim": 81.6,
+      "animacao": "aroma",
+      "legenda": 0.5,
+      "orador": {
+        "escalaBase": 1.0,
+        "foco": "47% 30%"
+      },
+      "tempos": [
+        77.63
+      ]
+    },
+    {
+      "tipo": "rosto",
+      "inicio": 81.6,
       "fim": 85.76,
       "orador": {
         "escalaBase": 1.45
@@ -1743,6 +1771,11 @@
       "inicio": 92.91,
       "fim": 97.45,
       "animacao": "portasSensoriais",
+      "legenda": 0.5,
+      "orador": {
+        "escalaBase": 1.0,
+        "foco": "47% 30%"
+      },
       "tempos": [
         93.2,
         93.45,
@@ -1750,12 +1783,7 @@
         93.95,
         94.2,
         95.35
-      ],
-      "orador": {
-        "escalaBase": 1.0,
-        "foco": "47% 30%"
-      },
-      "legenda": 0.5
+      ]
     }
   ],
   "sobreposicoes": [
@@ -1767,25 +1795,12 @@
       "icone": "Sunrise"
     },
     {
-      "tipo": "destaque",
-      "inicio": 11.0,
-      "fim": 12.9,
-      "texto": "Escrever",
-      "icone": "PenLine"
-    },
-    {
-      "tipo": "destaque",
-      "inicio": 13.6,
-      "fim": 15.4,
-      "texto": "Revisar",
-      "icone": "RefreshCw"
-    },
-    {
-      "tipo": "destaque",
-      "inicio": 15.6,
-      "fim": 17.4,
-      "texto": "Ler em voz alta",
-      "icone": "Volume2"
+      "tipo": "flutuante",
+      "inicio": 9.4,
+      "fim": 10.9,
+      "texto": "oração",
+      "lado": "direita",
+      "y": 0.15
     },
     {
       "tipo": "destaque",
@@ -1802,18 +1817,44 @@
       "certo": "Mind Movie"
     },
     {
-      "tipo": "destaque",
-      "inicio": 41.4,
-      "fim": 44.2,
-      "texto": "Ler",
-      "icone": "BookOpen"
+      "tipo": "flutuante",
+      "inicio": 41.3,
+      "fim": 43.2,
+      "texto": "ler",
+      "lado": "esquerda",
+      "y": 0.53
     },
     {
-      "tipo": "destaque",
-      "inicio": 44.6,
+      "tipo": "flutuante",
+      "inicio": 43.4,
+      "fim": 45.0,
+      "texto": "mentalmente",
+      "lado": "direita",
+      "y": 0.15
+    },
+    {
+      "tipo": "flutuante",
+      "inicio": 45.2,
       "fim": 46.9,
-      "texto": "Falar em voz alta",
-      "icone": "Mic"
+      "texto": "em voz alta",
+      "lado": "esquerda",
+      "y": 0.53
+    },
+    {
+      "tipo": "flutuante",
+      "inicio": 54.5,
+      "fim": 56.4,
+      "texto": "portas sensoriais",
+      "lado": "direita",
+      "y": 0.15
+    },
+    {
+      "tipo": "flutuante",
+      "inicio": 56.2,
+      "fim": 58.1,
+      "texto": "gravar mais forte",
+      "lado": "esquerda",
+      "y": 0.53
     },
     {
       "tipo": "destaque",
@@ -1825,46 +1866,82 @@
     {
       "tipo": "palavraAtras",
       "inicio": 61.6,
-      "fim": 64.6,
+      "fim": 64.0,
       "texto": "emoções"
     },
     {
-      "tipo": "destaque",
-      "inicio": 77.0,
-      "fim": 79.6,
-      "texto": "Cheiro de perfume",
-      "icone": "Flower2"
+      "tipo": "flutuante",
+      "inicio": 62.5,
+      "fim": 64.2,
+      "texto": "vibrações",
+      "lado": "direita",
+      "y": 0.15
+    },
+    {
+      "tipo": "flutuante",
+      "inicio": 63.9,
+      "fim": 65.0,
+      "texto": "estados sensíveis",
+      "lado": "esquerda",
+      "y": 0.53
+    },
+    {
+      "tipo": "flutuante",
+      "inicio": 72.6,
+      "fim": 74.4,
+      "texto": "automaticamente",
+      "lado": "esquerda",
+      "y": 0.15
+    },
+    {
+      "tipo": "flutuante",
+      "inicio": 75.2,
+      "fim": 76.85,
+      "texto": "daquele momento",
+      "lado": "direita",
+      "y": 0.53
+    },
+    {
+      "tipo": "flutuante",
+      "inicio": 82.4,
+      "fim": 84.0,
+      "texto": "estressado",
+      "lado": "direita",
+      "y": 0.15
+    },
+    {
+      "tipo": "flutuante",
+      "inicio": 84.7,
+      "fim": 85.7,
+      "texto": "aquele cheirinho",
+      "lado": "esquerda",
+      "y": 0.53
     },
     {
       "tipo": "palavraAtras",
       "inicio": 86.9,
-      "fim": 89.6,
+      "fim": 89.3,
       "texto": "infância"
+    },
+    {
+      "tipo": "flutuante",
+      "inicio": 88.7,
+      "fim": 90.3,
+      "texto": "jovem",
+      "lado": "direita",
+      "y": 0.15
+    },
+    {
+      "tipo": "flutuante",
+      "inicio": 91.2,
+      "fim": 92.9,
+      "texto": "essa sensação",
+      "lado": "esquerda",
+      "y": 0.53
     }
   ],
   "musicas": [],
   "efeitos": [],
   "encerramento": true,
-  "assinatura": "pessoal",
-  "stories": {
-    "inicio": 35.87,
-    "fim": 53.32
-  },
-  "carrossel": [
-    {
-      "titulo": "Grafirmaliza",
-      "texto": "Gratidão, afirmação\ne visualização.\nO nosso ritual diário."
-    },
-    {
-      "titulo": "Escrever,\nrevisar e ler\nem voz alta."
-    },
-    {
-      "titulo": "Quanto mais você usa\nas portas sensoriais,",
-      "texto": "mais você grava forte\nno seu subconsciente."
-    },
-    {
-      "titulo": "Música, cheiro,\nmemória.",
-      "texto": "O subconsciente trabalha com\nos gatilhos das nossas\nportas sensoriais."
-    }
-  ]
+  "assinatura": "pessoal"
 }
