@@ -28,12 +28,16 @@ if [ ! -x .venv/bin/python ]; then
 fi
 .venv/bin/pip install -q -r requirements.txt
 
-# 5. Modelo de transcrição (641 MB, grande demais para o GitHub)
-MODELO=sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8
-if [ ! -f "modelos/$MODELO/encoder.int8.onnx" ]; then
-  mkdir -p modelos
-  curl -sSLf "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/$MODELO.tar.bz2" \
-    | tar xj -C modelos --exclude="$MODELO/test_wavs"
+# 5. Modelos (grandes demais para o GitHub): transcrição (Whisper turbo, 564 MB)
+#    e recorte da silhueta para as animações que passam atrás do Diogo (15 MB)
+mkdir -p modelos
+if [ ! -f modelos/sherpa-onnx-whisper-turbo/turbo-encoder.int8.onnx ]; then
+  curl -sSLf "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-turbo.tar.bz2" \
+    | tar xj -C modelos --exclude="sherpa-onnx-whisper-turbo/test_wavs"
+fi
+if [ ! -f modelos/rvm_mobilenetv3_fp32.onnx ]; then
+  curl -sSLf -o modelos/rvm_mobilenetv3_fp32.onnx \
+    "https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3_fp32.onnx"
 fi
 
 # Deixa o python/yt-dlp/gdown do .venv disponíveis na sessão
