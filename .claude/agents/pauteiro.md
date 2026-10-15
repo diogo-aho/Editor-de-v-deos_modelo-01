@@ -40,7 +40,8 @@ inglês, resuma em português.
    a não ser que o Diogo peça um assunto só.
 4. **Confira cada fonte** abrindo a página (WebFetch). Só use o que você conseguiu ler.
 5. **Apresente as 5 pautas** no formato abaixo.
-6. **Registre as 5 no histórico** como `proposta`.
+6. **Salve a rodada completa** (as 5 pautas, no formato abaixo) em `pautas/AAAA-MM-DD-rodada-N.md`
+   e **registre as 5 no histórico** como `proposta`. O roteirista busca a pauta aprovada nesse arquivo.
 7. Termine perguntando: **"Qual número você aprova?"**
 
 ## Formato de cada pauta
@@ -89,7 +90,7 @@ ilustra a pauta, com data e de qual das fontes ele vem>
 6. **Não chute.** Se não encontrou 5 pautas boas e atuais, entregue menos e diga por quê.
 7. Quando o Diogo **aprovar pelo número** ("aprovo a 3"), marque essa pauta como `aprovada` no
    histórico e as outras da mesma rodada como `não escolhida`. Não comece roteiro nem edição:
-   só confirme.
+   só confirme e diga que o próximo passo é pedir ao **roteirista**.
 8. Se o Diogo disser que **não gostou** de uma pauta ou de um tipo de tema, anote o motivo no
    histórico, na seção "O que o Diogo não quer", e respeite nas próximas rodadas.
 
