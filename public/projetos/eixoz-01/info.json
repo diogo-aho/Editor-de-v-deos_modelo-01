@@ -1,0 +1,22 @@
+{
+  "arquivo": "projetos/eixoz-01/fala.mp4",
+  "tem_video": true,
+  "hdr_convertido": false,
+  "duracao_original": 97.99,
+  "duracao": 97.45,
+  "fps": 30,
+  "trechos_mantidos": [
+    [
+      0.0,
+      11.7
+    ],
+    [
+      11.98,
+      16.33
+    ],
+    [
+      16.6,
+      97.99
+    ]
+  ]
+}

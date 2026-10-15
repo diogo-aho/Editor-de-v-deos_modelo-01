@@ -1,0 +1,1862 @@
+{
+  "titulo": "Eixoz — Grafirmaliza e as portas sensoriais",
+  "tema": "escuro",
+  "clima": "quente",
+  "fala": "projetos/eixoz-01/fala.mp4",
+  "duracao": 97.45,
+  "orador": {
+    "foco": "47% 26%",
+    "video": "projetos/eixoz-01/fala.mp4",
+    "frente": "projetos/eixoz-01/frente.webm",
+    "escalaBase": 1.3
+  },
+  "palavras": [
+    {
+      "palavra": "Então",
+      "inicio": 0.32,
+      "fim": 0.62
+    },
+    {
+      "palavra": "por",
+      "inicio": 0.62,
+      "fim": 0.77
+    },
+    {
+      "palavra": "isso",
+      "inicio": 0.77,
+      "fim": 1.07
+    },
+    {
+      "palavra": "que",
+      "inicio": 1.07,
+      "fim": 1.22
+    },
+    {
+      "palavra": "a",
+      "inicio": 1.22,
+      "fim": 1.37
+    },
+    {
+      "palavra": "gente",
+      "inicio": 1.37,
+      "fim": 1.67
+    },
+    {
+      "palavra": "criou",
+      "inicio": 1.67,
+      "fim": 1.82
+    },
+    {
+      "palavra": "o",
+      "inicio": 1.82,
+      "fim": 1.98
+    },
+    {
+      "palavra": "nosso",
+      "inicio": 1.98,
+      "fim": 2.28
+    },
+    {
+      "palavra": "ritual",
+      "inicio": 2.28,
+      "fim": 2.8,
+      "destaque": true
+    },
+    {
+      "palavra": "diário",
+      "inicio": 2.8,
+      "fim": 3.1
+    },
+    {
+      "palavra": "que",
+      "inicio": 3.1,
+      "fim": 3.55
+    },
+    {
+      "palavra": "a",
+      "inicio": 3.55,
+      "fim": 3.7
+    },
+    {
+      "palavra": "gente",
+      "inicio": 3.7,
+      "fim": 4.0
+    },
+    {
+      "palavra": "nomeou",
+      "inicio": 4.0,
+      "fim": 4.3
+    },
+    {
+      "palavra": "de",
+      "inicio": 4.3,
+      "fim": 4.45
+    },
+    {
+      "palavra": "Grafirmaliza,",
+      "inicio": 4.45,
+      "fim": 5.2,
+      "destaque": true
+    },
+    {
+      "palavra": "que",
+      "inicio": 5.2,
+      "fim": 5.35
+    },
+    {
+      "palavra": "é",
+      "inicio": 5.35,
+      "fim": 5.5
+    },
+    {
+      "palavra": "gratidão,",
+      "inicio": 5.5,
+      "fim": 5.96
+    },
+    {
+      "palavra": "afirmação",
+      "inicio": 5.96,
+      "fim": 6.56
+    },
+    {
+      "palavra": "e",
+      "inicio": 6.56,
+      "fim": 6.71
+    },
+    {
+      "palavra": "visualização.",
+      "inicio": 6.71,
+      "fim": 7.46
+    },
+    {
+      "palavra": "E",
+      "inicio": 7.86,
+      "fim": 7.97
+    },
+    {
+      "palavra": "a",
+      "inicio": 7.97,
+      "fim": 8.08
+    },
+    {
+      "palavra": "gente",
+      "inicio": 8.08,
+      "fim": 8.3
+    },
+    {
+      "palavra": "ter",
+      "inicio": 8.3,
+      "fim": 8.41
+    },
+    {
+      "palavra": "esse",
+      "inicio": 8.41,
+      "fim": 8.64
+    },
+    {
+      "palavra": "momento",
+      "inicio": 8.64,
+      "fim": 8.97
+    },
+    {
+      "palavra": "de",
+      "inicio": 8.97,
+      "fim": 9.08
+    },
+    {
+      "palavra": "fazer",
+      "inicio": 9.08,
+      "fim": 9.3
+    },
+    {
+      "palavra": "essa",
+      "inicio": 9.3,
+      "fim": 9.52
+    },
+    {
+      "palavra": "oração.",
+      "inicio": 9.52,
+      "fim": 9.85,
+      "destaque": true
+    },
+    {
+      "palavra": "Então,",
+      "inicio": 9.85,
+      "fim": 10.08
+    },
+    {
+      "palavra": "tem",
+      "inicio": 10.08,
+      "fim": 10.19
+    },
+    {
+      "palavra": "várias",
+      "inicio": 10.19,
+      "fim": 10.41
+    },
+    {
+      "palavra": "formas.",
+      "inicio": 10.41,
+      "fim": 10.63
+    },
+    {
+      "palavra": "Você",
+      "inicio": 10.63,
+      "fim": 10.85
+    },
+    {
+      "palavra": "pode",
+      "inicio": 10.85,
+      "fim": 11.07
+    },
+    {
+      "palavra": "escrever",
+      "inicio": 11.07,
+      "fim": 11.41
+    },
+    {
+      "palavra": "tudo",
+      "inicio": 11.41,
+      "fim": 11.99
+    },
+    {
+      "palavra": "isso,",
+      "inicio": 11.99,
+      "fim": 12.21
+    },
+    {
+      "palavra": "deixar",
+      "inicio": 12.21,
+      "fim": 12.43
+    },
+    {
+      "palavra": "bonitinho",
+      "inicio": 12.43,
+      "fim": 12.87
+    },
+    {
+      "palavra": "ali,",
+      "inicio": 12.87,
+      "fim": 13.1
+    },
+    {
+      "palavra": "depois",
+      "inicio": 13.1,
+      "fim": 13.32
+    },
+    {
+      "palavra": "você",
+      "inicio": 13.32,
+      "fim": 13.54
+    },
+    {
+      "palavra": "vai",
+      "inicio": 13.54,
+      "fim": 13.65
+    },
+    {
+      "palavra": "revisando",
+      "inicio": 13.65,
+      "fim": 14.09
+    },
+    {
+      "palavra": "conforme",
+      "inicio": 14.09,
+      "fim": 14.43
+    },
+    {
+      "palavra": "vai",
+      "inicio": 14.43,
+      "fim": 14.54
+    },
+    {
+      "palavra": "passar",
+      "inicio": 14.54,
+      "fim": 15.14
+    },
+    {
+      "palavra": "no",
+      "inicio": 15.14,
+      "fim": 15.25
+    },
+    {
+      "palavra": "tempo,",
+      "inicio": 15.25,
+      "fim": 15.47
+    },
+    {
+      "palavra": "e",
+      "inicio": 15.47,
+      "fim": 15.58
+    },
+    {
+      "palavra": "ler",
+      "inicio": 15.58,
+      "fim": 15.69
+    },
+    {
+      "palavra": "em",
+      "inicio": 15.69,
+      "fim": 15.8
+    },
+    {
+      "palavra": "voz",
+      "inicio": 15.8,
+      "fim": 16.29,
+      "destaque": true
+    },
+    {
+      "palavra": "alta.",
+      "inicio": 16.29,
+      "fim": 16.52
+    },
+    {
+      "palavra": "Isso",
+      "inicio": 16.52,
+      "fim": 16.74
+    },
+    {
+      "palavra": "é",
+      "inicio": 16.74,
+      "fim": 16.85
+    },
+    {
+      "palavra": "um",
+      "inicio": 16.85,
+      "fim": 16.96
+    },
+    {
+      "palavra": "ponto.",
+      "inicio": 16.96,
+      "fim": 17.18
+    },
+    {
+      "palavra": "Aí",
+      "inicio": 17.64,
+      "fim": 17.98
+    },
+    {
+      "palavra": "Joe",
+      "inicio": 17.98,
+      "fim": 18.32
+    },
+    {
+      "palavra": "Dispenza,",
+      "inicio": 18.32,
+      "fim": 19.61
+    },
+    {
+      "palavra": "ele",
+      "inicio": 19.61,
+      "fim": 20.43
+    },
+    {
+      "palavra": "criou",
+      "inicio": 20.43,
+      "fim": 20.77
+    },
+    {
+      "palavra": "um",
+      "inicio": 20.77,
+      "fim": 21.1
+    },
+    {
+      "palavra": "MindVision",
+      "inicio": 21.11,
+      "fim": 22.12
+    },
+    {
+      "palavra": "que",
+      "inicio": 22.6,
+      "fim": 22.76
+    },
+    {
+      "palavra": "aí",
+      "inicio": 22.76,
+      "fim": 22.91
+    },
+    {
+      "palavra": "é",
+      "inicio": 22.91,
+      "fim": 23.07
+    },
+    {
+      "palavra": "um",
+      "inicio": 23.07,
+      "fim": 23.22
+    },
+    {
+      "palavra": "programa,",
+      "inicio": 23.22,
+      "fim": 23.69
+    },
+    {
+      "palavra": "uma",
+      "inicio": 23.69,
+      "fim": 24.0
+    },
+    {
+      "palavra": "terapia",
+      "inicio": 24.0,
+      "fim": 24.46
+    },
+    {
+      "palavra": "que",
+      "inicio": 24.46,
+      "fim": 24.62
+    },
+    {
+      "palavra": "ele",
+      "inicio": 24.62,
+      "fim": 24.93
+    },
+    {
+      "palavra": "faz",
+      "inicio": 24.93,
+      "fim": 25.08
+    },
+    {
+      "palavra": "assim,",
+      "inicio": 25.08,
+      "fim": 25.39
+    },
+    {
+      "palavra": "que",
+      "inicio": 25.39,
+      "fim": 25.55
+    },
+    {
+      "palavra": "ele",
+      "inicio": 25.55,
+      "fim": 25.86
+    },
+    {
+      "palavra": "cria",
+      "inicio": 25.86,
+      "fim": 26.01
+    },
+    {
+      "palavra": "um",
+      "inicio": 26.01,
+      "fim": 26.43
+    },
+    {
+      "palavra": "filme",
+      "inicio": 26.43,
+      "fim": 26.74,
+      "destaque": true
+    },
+    {
+      "palavra": "com",
+      "inicio": 26.74,
+      "fim": 26.89
+    },
+    {
+      "palavra": "a",
+      "inicio": 26.89,
+      "fim": 27.05
+    },
+    {
+      "palavra": "sua",
+      "inicio": 27.05,
+      "fim": 27.2
+    },
+    {
+      "palavra": "visualização.",
+      "inicio": 27.2,
+      "fim": 27.98
+    },
+    {
+      "palavra": "Crie",
+      "inicio": 28.4,
+      "fim": 28.57
+    },
+    {
+      "palavra": "um",
+      "inicio": 28.57,
+      "fim": 28.73
+    },
+    {
+      "palavra": "filme",
+      "inicio": 28.73,
+      "fim": 29.07,
+      "destaque": true
+    },
+    {
+      "palavra": "pra",
+      "inicio": 29.07,
+      "fim": 29.23
+    },
+    {
+      "palavra": "você",
+      "inicio": 29.23,
+      "fim": 29.57
+    },
+    {
+      "palavra": "assistir",
+      "inicio": 29.57,
+      "fim": 30.07
+    },
+    {
+      "palavra": "aquilo",
+      "inicio": 30.07,
+      "fim": 30.83
+    },
+    {
+      "palavra": "com",
+      "inicio": 30.83,
+      "fim": 31.0
+    },
+    {
+      "palavra": "música",
+      "inicio": 31.0,
+      "fim": 31.5
+    },
+    {
+      "palavra": "e",
+      "inicio": 31.5,
+      "fim": 31.84
+    },
+    {
+      "palavra": "vai",
+      "inicio": 31.84,
+      "fim": 32.01
+    },
+    {
+      "palavra": "aparecendo",
+      "inicio": 32.01,
+      "fim": 32.84
+    },
+    {
+      "palavra": "as",
+      "inicio": 32.84,
+      "fim": 33.01
+    },
+    {
+      "palavra": "palavras",
+      "inicio": 33.01,
+      "fim": 33.51
+    },
+    {
+      "palavra": "daquilo",
+      "inicio": 33.51,
+      "fim": 34.01
+    },
+    {
+      "palavra": "que",
+      "inicio": 34.01,
+      "fim": 34.18
+    },
+    {
+      "palavra": "você",
+      "inicio": 34.18,
+      "fim": 34.51
+    },
+    {
+      "palavra": "está",
+      "inicio": 34.51,
+      "fim": 34.84
+    },
+    {
+      "palavra": "afirmando.",
+      "inicio": 34.84,
+      "fim": 35.87
+    },
+    {
+      "palavra": "Quanto",
+      "inicio": 35.87,
+      "fim": 36.21
+    },
+    {
+      "palavra": "mais",
+      "inicio": 36.21,
+      "fim": 36.37
+    },
+    {
+      "palavra": "você",
+      "inicio": 36.37,
+      "fim": 36.71
+    },
+    {
+      "palavra": "usa",
+      "inicio": 36.71,
+      "fim": 37.04
+    },
+    {
+      "palavra": "suas",
+      "inicio": 37.04,
+      "fim": 37.21
+    },
+    {
+      "palavra": "portas",
+      "inicio": 37.21,
+      "fim": 37.54,
+      "destaque": true
+    },
+    {
+      "palavra": "sensoriais..",
+      "inicio": 37.54,
+      "fim": 38.04
+    },
+    {
+      "palavra": "mais",
+      "inicio": 38.32,
+      "fim": 38.46
+    },
+    {
+      "palavra": "você",
+      "inicio": 38.46,
+      "fim": 38.73
+    },
+    {
+      "palavra": "vai",
+      "inicio": 38.73,
+      "fim": 38.86
+    },
+    {
+      "palavra": "gravar",
+      "inicio": 38.86,
+      "fim": 39.14
+    },
+    {
+      "palavra": "forte",
+      "inicio": 39.14,
+      "fim": 39.41
+    },
+    {
+      "palavra": "nesse",
+      "inicio": 39.41,
+      "fim": 39.68
+    },
+    {
+      "palavra": "seu",
+      "inicio": 39.68,
+      "fim": 39.82
+    },
+    {
+      "palavra": "subconsciente.",
+      "inicio": 39.82,
+      "fim": 40.36,
+      "destaque": true
+    },
+    {
+      "palavra": "Então",
+      "inicio": 40.68,
+      "fim": 40.95
+    },
+    {
+      "palavra": "se",
+      "inicio": 40.95,
+      "fim": 41.08
+    },
+    {
+      "palavra": "você",
+      "inicio": 41.08,
+      "fim": 41.35
+    },
+    {
+      "palavra": "só",
+      "inicio": 41.35,
+      "fim": 41.48
+    },
+    {
+      "palavra": "leu",
+      "inicio": 41.48,
+      "fim": 41.61
+    },
+    {
+      "palavra": "uma",
+      "inicio": 41.61,
+      "fim": 41.88
+    },
+    {
+      "palavra": "coisa,",
+      "inicio": 41.88,
+      "fim": 42.45
+    },
+    {
+      "palavra": "beleza,",
+      "inicio": 42.45,
+      "fim": 42.85
+    },
+    {
+      "palavra": "você",
+      "inicio": 42.85,
+      "fim": 43.12
+    },
+    {
+      "palavra": "tá",
+      "inicio": 43.12,
+      "fim": 43.25
+    },
+    {
+      "palavra": "lendo",
+      "inicio": 43.25,
+      "fim": 43.52
+    },
+    {
+      "palavra": "mentalmente.",
+      "inicio": 43.52,
+      "fim": 44.37
+    },
+    {
+      "palavra": "Quando",
+      "inicio": 44.37,
+      "fim": 44.64
+    },
+    {
+      "palavra": "você",
+      "inicio": 44.64,
+      "fim": 44.9
+    },
+    {
+      "palavra": "lê",
+      "inicio": 44.9,
+      "fim": 45.04
+    },
+    {
+      "palavra": "e",
+      "inicio": 45.04,
+      "fim": 45.17
+    },
+    {
+      "palavra": "fala",
+      "inicio": 45.17,
+      "fim": 45.44
+    },
+    {
+      "palavra": "em",
+      "inicio": 45.44,
+      "fim": 45.57
+    },
+    {
+      "palavra": "voz",
+      "inicio": 45.57,
+      "fim": 45.71,
+      "destaque": true
+    },
+    {
+      "palavra": "alta,",
+      "inicio": 45.71,
+      "fim": 45.97
+    },
+    {
+      "palavra": "você",
+      "inicio": 45.97,
+      "fim": 46.24
+    },
+    {
+      "palavra": "tá",
+      "inicio": 46.24,
+      "fim": 46.37
+    },
+    {
+      "palavra": "lendo...",
+      "inicio": 46.37,
+      "fim": 46.64
+    },
+    {
+      "palavra": "Você",
+      "inicio": 47.02,
+      "fim": 47.25
+    },
+    {
+      "palavra": "está",
+      "inicio": 47.25,
+      "fim": 47.47
+    },
+    {
+      "palavra": "colocando",
+      "inicio": 47.47,
+      "fim": 48.13
+    },
+    {
+      "palavra": "o",
+      "inicio": 48.13,
+      "fim": 48.24
+    },
+    {
+      "palavra": "seu",
+      "inicio": 48.24,
+      "fim": 48.35
+    },
+    {
+      "palavra": "cérebro",
+      "inicio": 48.35,
+      "fim": 48.69
+    },
+    {
+      "palavra": "para",
+      "inicio": 48.69,
+      "fim": 48.92
+    },
+    {
+      "palavra": "você",
+      "inicio": 48.92,
+      "fim": 49.14
+    },
+    {
+      "palavra": "conseguir",
+      "inicio": 49.14,
+      "fim": 49.48
+    },
+    {
+      "palavra": "falar,",
+      "inicio": 49.48,
+      "fim": 49.71
+    },
+    {
+      "palavra": "e",
+      "inicio": 49.71,
+      "fim": 49.82
+    },
+    {
+      "palavra": "quando",
+      "inicio": 49.82,
+      "fim": 50.23
+    },
+    {
+      "palavra": "você",
+      "inicio": 50.23,
+      "fim": 50.46
+    },
+    {
+      "palavra": "está",
+      "inicio": 50.46,
+      "fim": 50.68
+    },
+    {
+      "palavra": "falando",
+      "inicio": 50.68,
+      "fim": 51.02
+    },
+    {
+      "palavra": "aquilo,",
+      "inicio": 51.02,
+      "fim": 51.36
+    },
+    {
+      "palavra": "você",
+      "inicio": 51.36,
+      "fim": 51.59
+    },
+    {
+      "palavra": "está",
+      "inicio": 51.59,
+      "fim": 51.81
+    },
+    {
+      "palavra": "ouvindo",
+      "inicio": 51.81,
+      "fim": 52.15
+    },
+    {
+      "palavra": "aquilo.",
+      "inicio": 52.15,
+      "fim": 52.49
+    },
+    {
+      "palavra": "Então",
+      "inicio": 52.49,
+      "fim": 52.72
+    },
+    {
+      "palavra": "você",
+      "inicio": 52.72,
+      "fim": 52.95
+    },
+    {
+      "palavra": "já...",
+      "inicio": 52.95,
+      "fim": 53.06
+    },
+    {
+      "palavra": "Usou",
+      "inicio": 53.32,
+      "fim": 53.64
+    },
+    {
+      "palavra": "muito",
+      "inicio": 53.64,
+      "fim": 53.95
+    },
+    {
+      "palavra": "mais",
+      "inicio": 53.95,
+      "fim": 54.11
+    },
+    {
+      "palavra": "essas",
+      "inicio": 54.11,
+      "fim": 54.68
+    },
+    {
+      "palavra": "portas",
+      "inicio": 54.68,
+      "fim": 55.0,
+      "destaque": true
+    },
+    {
+      "palavra": "sensoriais",
+      "inicio": 55.0,
+      "fim": 55.47
+    },
+    {
+      "palavra": "para",
+      "inicio": 55.47,
+      "fim": 55.79
+    },
+    {
+      "palavra": "poder",
+      "inicio": 55.79,
+      "fim": 56.1
+    },
+    {
+      "palavra": "gravar",
+      "inicio": 56.1,
+      "fim": 56.58
+    },
+    {
+      "palavra": "mais",
+      "inicio": 56.58,
+      "fim": 56.74
+    },
+    {
+      "palavra": "forte",
+      "inicio": 56.74,
+      "fim": 57.05
+    },
+    {
+      "palavra": "no",
+      "inicio": 57.05,
+      "fim": 57.21
+    },
+    {
+      "palavra": "subconsciente.",
+      "inicio": 57.21,
+      "fim": 57.84,
+      "destaque": true
+    },
+    {
+      "palavra": "É",
+      "inicio": 58.2,
+      "fim": 58.36
+    },
+    {
+      "palavra": "quando",
+      "inicio": 58.36,
+      "fim": 58.69
+    },
+    {
+      "palavra": "você",
+      "inicio": 58.69,
+      "fim": 59.01
+    },
+    {
+      "palavra": "inclui",
+      "inicio": 59.01,
+      "fim": 59.34
+    },
+    {
+      "palavra": "a",
+      "inicio": 59.34,
+      "fim": 59.5
+    },
+    {
+      "palavra": "música,",
+      "inicio": 59.5,
+      "fim": 59.99
+    },
+    {
+      "palavra": "a",
+      "inicio": 59.99,
+      "fim": 60.15
+    },
+    {
+      "palavra": "música",
+      "inicio": 60.15,
+      "fim": 60.64
+    },
+    {
+      "palavra": "traz..",
+      "inicio": 60.64,
+      "fim": 60.8
+    },
+    {
+      "palavra": "esse",
+      "inicio": 61.22,
+      "fim": 61.49
+    },
+    {
+      "palavra": "lugar",
+      "inicio": 61.49,
+      "fim": 61.77
+    },
+    {
+      "palavra": "das",
+      "inicio": 61.77,
+      "fim": 61.9
+    },
+    {
+      "palavra": "emoções,",
+      "inicio": 61.9,
+      "fim": 62.31,
+      "destaque": true
+    },
+    {
+      "palavra": "né?",
+      "inicio": 62.31,
+      "fim": 62.45
+    },
+    {
+      "palavra": "As",
+      "inicio": 62.45,
+      "fim": 62.59
+    },
+    {
+      "palavra": "vibrações",
+      "inicio": 62.59,
+      "fim": 63.21
+    },
+    {
+      "palavra": "te",
+      "inicio": 63.21,
+      "fim": 63.35
+    },
+    {
+      "palavra": "colocam",
+      "inicio": 63.35,
+      "fim": 63.76
+    },
+    {
+      "palavra": "em",
+      "inicio": 63.76,
+      "fim": 63.9
+    },
+    {
+      "palavra": "estados",
+      "inicio": 63.9,
+      "fim": 64.31
+    },
+    {
+      "palavra": "sensíveis.",
+      "inicio": 64.31,
+      "fim": 65.04
+    },
+    {
+      "palavra": "Você",
+      "inicio": 65.04,
+      "fim": 65.31
+    },
+    {
+      "palavra": "pode",
+      "inicio": 65.31,
+      "fim": 65.58
+    },
+    {
+      "palavra": "ouvir",
+      "inicio": 65.58,
+      "fim": 66.1
+    },
+    {
+      "palavra": "músicas",
+      "inicio": 66.1,
+      "fim": 66.5
+    },
+    {
+      "palavra": "de",
+      "inicio": 66.5,
+      "fim": 66.64
+    },
+    {
+      "palavra": "quando",
+      "inicio": 66.64,
+      "fim": 66.91
+    },
+    {
+      "palavra": "você",
+      "inicio": 66.91,
+      "fim": 67.19
+    },
+    {
+      "palavra": "era",
+      "inicio": 67.19,
+      "fim": 67.46
+    },
+    {
+      "palavra": "criança,",
+      "inicio": 67.46,
+      "fim": 67.73
+    },
+    {
+      "palavra": "você",
+      "inicio": 67.73,
+      "fim": 68.01
+    },
+    {
+      "palavra": "ouvia",
+      "inicio": 68.01,
+      "fim": 68.28
+    },
+    {
+      "palavra": "a",
+      "inicio": 68.28,
+      "fim": 68.42
+    },
+    {
+      "palavra": "música,",
+      "inicio": 68.42,
+      "fim": 68.83
+    },
+    {
+      "palavra": "aquela",
+      "inicio": 68.83,
+      "fim": 69.23
+    },
+    {
+      "palavra": "que",
+      "inicio": 69.23,
+      "fim": 69.37
+    },
+    {
+      "palavra": "te",
+      "inicio": 69.37,
+      "fim": 69.51
+    },
+    {
+      "palavra": "gravou",
+      "inicio": 69.51,
+      "fim": 69.78
+    },
+    {
+      "palavra": "de",
+      "inicio": 69.78,
+      "fim": 69.92
+    },
+    {
+      "palavra": "um",
+      "inicio": 69.92,
+      "fim": 70.05
+    },
+    {
+      "palavra": "momento",
+      "inicio": 70.05,
+      "fim": 70.46
+    },
+    {
+      "palavra": "X.",
+      "inicio": 70.46,
+      "fim": 70.6
+    },
+    {
+      "palavra": "Se",
+      "inicio": 70.94,
+      "fim": 71.09
+    },
+    {
+      "palavra": "ouvir",
+      "inicio": 71.09,
+      "fim": 71.38
+    },
+    {
+      "palavra": "aquela",
+      "inicio": 71.38,
+      "fim": 71.82
+    },
+    {
+      "palavra": "música",
+      "inicio": 71.82,
+      "fim": 72.26
+    },
+    {
+      "palavra": "de",
+      "inicio": 72.26,
+      "fim": 72.41
+    },
+    {
+      "palavra": "novo,",
+      "inicio": 72.41,
+      "fim": 72.7
+    },
+    {
+      "palavra": "automaticamente",
+      "inicio": 72.7,
+      "fim": 73.72
+    },
+    {
+      "palavra": "o",
+      "inicio": 73.72,
+      "fim": 73.87
+    },
+    {
+      "palavra": "subconsciente",
+      "inicio": 73.87,
+      "fim": 74.46
+    },
+    {
+      "palavra": "vai",
+      "inicio": 74.46,
+      "fim": 74.6
+    },
+    {
+      "palavra": "trazer",
+      "inicio": 74.6,
+      "fim": 75.16
+    },
+    {
+      "palavra": "a",
+      "inicio": 75.16,
+      "fim": 75.3
+    },
+    {
+      "palavra": "vibração",
+      "inicio": 75.3,
+      "fim": 75.74,
+      "destaque": true
+    },
+    {
+      "palavra": "daquele",
+      "inicio": 75.74,
+      "fim": 76.46
+    },
+    {
+      "palavra": "momento.",
+      "inicio": 76.46,
+      "fim": 76.9
+    },
+    {
+      "palavra": "Um",
+      "inicio": 76.9,
+      "fim": 77.05
+    },
+    {
+      "palavra": "cheiro",
+      "inicio": 77.05,
+      "fim": 77.48
+    },
+    {
+      "palavra": "de",
+      "inicio": 77.48,
+      "fim": 77.63
+    },
+    {
+      "palavra": "perfume.",
+      "inicio": 77.63,
+      "fim": 78.07,
+      "destaque": true
+    },
+    {
+      "palavra": "O",
+      "inicio": 78.07,
+      "fim": 78.21
+    },
+    {
+      "palavra": "talo",
+      "inicio": 78.21,
+      "fim": 78.51
+    },
+    {
+      "palavra": "gosta",
+      "inicio": 78.51,
+      "fim": 78.8
+    },
+    {
+      "palavra": "bastante",
+      "inicio": 78.8,
+      "fim": 79.24
+    },
+    {
+      "palavra": "usar",
+      "inicio": 79.56,
+      "fim": 80.03
+    },
+    {
+      "palavra": "os",
+      "inicio": 80.03,
+      "fim": 80.16
+    },
+    {
+      "palavra": "cheiros",
+      "inicio": 80.16,
+      "fim": 80.43
+    },
+    {
+      "palavra": "para",
+      "inicio": 80.43,
+      "fim": 80.7
+    },
+    {
+      "palavra": "poder",
+      "inicio": 80.7,
+      "fim": 80.97
+    },
+    {
+      "palavra": "lembrar",
+      "inicio": 80.97,
+      "fim": 81.24
+    },
+    {
+      "palavra": "de",
+      "inicio": 81.24,
+      "fim": 81.38
+    },
+    {
+      "palavra": "momentos",
+      "inicio": 81.38,
+      "fim": 81.98
+    },
+    {
+      "palavra": "assim,",
+      "inicio": 81.98,
+      "fim": 82.25
+    },
+    {
+      "palavra": "\"estás",
+      "inicio": 82.25,
+      "fim": 82.52
+    },
+    {
+      "palavra": "estressado\"",
+      "inicio": 82.52,
+      "fim": 83.06
+    },
+    {
+      "palavra": "com",
+      "inicio": 83.06,
+      "fim": 83.2
+    },
+    {
+      "palavra": "alguma",
+      "inicio": 83.2,
+      "fim": 83.6
+    },
+    {
+      "palavra": "coisa,",
+      "inicio": 83.6,
+      "fim": 83.87
+    },
+    {
+      "palavra": "para",
+      "inicio": 83.87,
+      "fim": 84.14
+    },
+    {
+      "palavra": "pegar",
+      "inicio": 84.14,
+      "fim": 84.41
+    },
+    {
+      "palavra": "aquele",
+      "inicio": 84.41,
+      "fim": 84.82
+    },
+    {
+      "palavra": "cheirinho...",
+      "inicio": 84.82,
+      "fim": 85.22
+    },
+    {
+      "palavra": "Te",
+      "inicio": 85.76,
+      "fim": 85.9
+    },
+    {
+      "palavra": "lembra",
+      "inicio": 85.9,
+      "fim": 86.17
+    },
+    {
+      "palavra": "aquele",
+      "inicio": 86.17,
+      "fim": 86.57
+    },
+    {
+      "palavra": "cheiro",
+      "inicio": 86.57,
+      "fim": 86.84
+    },
+    {
+      "palavra": "da",
+      "inicio": 86.84,
+      "fim": 86.98
+    },
+    {
+      "palavra": "sua",
+      "inicio": 86.98,
+      "fim": 87.12
+    },
+    {
+      "palavra": "infância,",
+      "inicio": 87.12,
+      "fim": 87.52,
+      "destaque": true
+    },
+    {
+      "palavra": "de",
+      "inicio": 87.52,
+      "fim": 87.66
+    },
+    {
+      "palavra": "quando",
+      "inicio": 87.66,
+      "fim": 87.93
+    },
+    {
+      "palavra": "você...",
+      "inicio": 87.93,
+      "fim": 88.2
+    },
+    {
+      "palavra": "Era",
+      "inicio": 88.5,
+      "fim": 88.77
+    },
+    {
+      "palavra": "jovem,",
+      "inicio": 88.77,
+      "fim": 89.05
+    },
+    {
+      "palavra": "tudo",
+      "inicio": 89.05,
+      "fim": 89.32
+    },
+    {
+      "palavra": "dava",
+      "inicio": 89.32,
+      "fim": 89.59
+    },
+    {
+      "palavra": "maravilhosamente",
+      "inicio": 89.59,
+      "fim": 90.55
+    },
+    {
+      "palavra": "bem,",
+      "inicio": 90.55,
+      "fim": 90.69
+    },
+    {
+      "palavra": "e",
+      "inicio": 90.69,
+      "fim": 90.83
+    },
+    {
+      "palavra": "aí",
+      "inicio": 90.83,
+      "fim": 90.96
+    },
+    {
+      "palavra": "você",
+      "inicio": 90.96,
+      "fim": 91.54
+    },
+    {
+      "palavra": "consegue",
+      "inicio": 91.54,
+      "fim": 91.95
+    },
+    {
+      "palavra": "trazer",
+      "inicio": 91.95,
+      "fim": 92.22
+    },
+    {
+      "palavra": "essa",
+      "inicio": 92.22,
+      "fim": 92.49
+    },
+    {
+      "palavra": "sensação.",
+      "inicio": 92.49,
+      "fim": 92.91
+    },
+    {
+      "palavra": "Então,",
+      "inicio": 92.91,
+      "fim": 93.18
+    },
+    {
+      "palavra": "o",
+      "inicio": 93.18,
+      "fim": 93.32
+    },
+    {
+      "palavra": "nosso",
+      "inicio": 93.32,
+      "fim": 93.85
+    },
+    {
+      "palavra": "subconsciente",
+      "inicio": 93.85,
+      "fim": 94.4
+    },
+    {
+      "palavra": "já",
+      "inicio": 94.4,
+      "fim": 94.53
+    },
+    {
+      "palavra": "trabalha",
+      "inicio": 94.53,
+      "fim": 94.94
+    },
+    {
+      "palavra": "com",
+      "inicio": 94.94,
+      "fim": 95.08
+    },
+    {
+      "palavra": "esses",
+      "inicio": 95.08,
+      "fim": 95.35
+    },
+    {
+      "palavra": "gatilhos",
+      "inicio": 95.35,
+      "fim": 95.77,
+      "destaque": true
+    },
+    {
+      "palavra": "das",
+      "inicio": 95.77,
+      "fim": 95.9
+    },
+    {
+      "palavra": "nossas",
+      "inicio": 95.9,
+      "fim": 96.18
+    },
+    {
+      "palavra": "portas",
+      "inicio": 96.18,
+      "fim": 96.45,
+      "destaque": true
+    },
+    {
+      "palavra": "sensoriais.",
+      "inicio": 96.45,
+      "fim": 96.86
+    }
+  ],
+  "cenas": [
+    {
+      "tipo": "rosto",
+      "inicio": 0,
+      "fim": 4.3,
+      "orador": {
+        "escalaBase": 1.3
+      },
+      "zooms": [
+        {
+          "em": 2.1,
+          "escala": 1.12,
+          "ate": 4.3
+        }
+      ]
+    },
+    {
+      "tipo": "telaCheia",
+      "inicio": 4.3,
+      "fim": 9.85,
+      "animacao": "grafirmaliza",
+      "tempos": [
+        4.45,
+        5.5,
+        5.96,
+        6.71
+      ],
+      "legenda": "esconder"
+    },
+    {
+      "tipo": "rosto",
+      "inicio": 9.85,
+      "fim": 17.6,
+      "orador": {
+        "escalaBase": 1.45
+      },
+      "zooms": [
+        {
+          "em": 15.6,
+          "escala": 1.12,
+          "ate": 17.6
+        }
+      ]
+    },
+    {
+      "tipo": "rosto",
+      "inicio": 17.6,
+      "fim": 24.4,
+      "orador": {
+        "escalaBase": 1.3
+      },
+      "zooms": [
+        {
+          "em": 21.0,
+          "escala": 1.15,
+          "ate": 24.4
+        }
+      ]
+    },
+    {
+      "tipo": "telaCheia",
+      "inicio": 24.4,
+      "fim": 35.87,
+      "animacao": "filme",
+      "tempos": [
+        26.43,
+        31.0,
+        33.0
+      ],
+      "palavras": [
+        "Gratidão",
+        "Afirmação",
+        "Visualização"
+      ]
+    },
+    {
+      "tipo": "dividida",
+      "inicio": 35.87,
+      "fim": 40.68,
+      "animacao": "portasSensoriais",
+      "tempos": [
+        1000000000.0,
+        1000000000.0,
+        1000000000.0,
+        1000000000.0,
+        1000000000.0,
+        39.8
+      ],
+      "orador": {
+        "escalaBase": 1.0,
+        "foco": "47% 30%"
+      },
+      "legenda": 0.5
+    },
+    {
+      "tipo": "rosto",
+      "inicio": 40.68,
+      "fim": 47.02,
+      "orador": {
+        "escalaBase": 1.45
+      }
+    },
+    {
+      "tipo": "dividida",
+      "inicio": 47.02,
+      "fim": 53.32,
+      "animacao": "portasSensoriais",
+      "tempos": [
+        47.3,
+        47.6,
+        51.8,
+        1000000000.0,
+        1000000000.0
+      ],
+      "orador": {
+        "escalaBase": 1.0,
+        "foco": "47% 30%"
+      },
+      "legenda": 0.5
+    },
+    {
+      "tipo": "rosto",
+      "inicio": 53.32,
+      "fim": 58.2,
+      "orador": {
+        "escalaBase": 1.3
+      },
+      "zooms": [
+        {
+          "em": 54.6,
+          "escala": 1.14,
+          "ate": 58.2
+        }
+      ]
+    },
+    {
+      "tipo": "rosto",
+      "inicio": 58.2,
+      "fim": 65.04,
+      "orador": {
+        "escalaBase": 1.6
+      }
+    },
+    {
+      "tipo": "dividida",
+      "inicio": 65.04,
+      "fim": 70.94,
+      "animacao": "vinil",
+      "tempos": [
+        67.3
+      ],
+      "palavras": [
+        "Músicas de quando você era criança"
+      ],
+      "orador": {
+        "escalaBase": 1.0,
+        "foco": "47% 30%"
+      },
+      "legenda": 0.5
+    },
+    {
+      "tipo": "rosto",
+      "inicio": 70.94,
+      "fim": 76.9,
+      "orador": {
+        "escalaBase": 1.3
+      },
+      "zooms": [
+        {
+          "em": 75.2,
+          "escala": 1.12,
+          "ate": 76.9
+        }
+      ]
+    },
+    {
+      "tipo": "rosto",
+      "inicio": 76.9,
+      "fim": 85.76,
+      "orador": {
+        "escalaBase": 1.45
+      }
+    },
+    {
+      "tipo": "rosto",
+      "inicio": 85.76,
+      "fim": 92.91,
+      "orador": {
+        "escalaBase": 1.3
+      },
+      "zooms": [
+        {
+          "em": 90.3,
+          "escala": 1.1,
+          "ate": 92.91
+        }
+      ]
+    },
+    {
+      "tipo": "dividida",
+      "inicio": 92.91,
+      "fim": 97.45,
+      "animacao": "portasSensoriais",
+      "tempos": [
+        93.2,
+        93.45,
+        93.7,
+        93.95,
+        94.2,
+        95.35
+      ],
+      "orador": {
+        "escalaBase": 1.0,
+        "foco": "47% 30%"
+      },
+      "legenda": 0.5
+    }
+  ],
+  "sobreposicoes": [
+    {
+      "tipo": "destaque",
+      "inicio": 2.2,
+      "fim": 4.2,
+      "texto": "Ritual diário",
+      "icone": "Sunrise"
+    },
+    {
+      "tipo": "destaque",
+      "inicio": 11.0,
+      "fim": 12.9,
+      "texto": "Escrever",
+      "icone": "PenLine"
+    },
+    {
+      "tipo": "destaque",
+      "inicio": 13.6,
+      "fim": 15.4,
+      "texto": "Revisar",
+      "icone": "RefreshCw"
+    },
+    {
+      "tipo": "destaque",
+      "inicio": 15.6,
+      "fim": 17.4,
+      "texto": "Ler em voz alta",
+      "icone": "Volume2"
+    },
+    {
+      "tipo": "destaque",
+      "inicio": 18.2,
+      "fim": 20.6,
+      "texto": "Joe Dispenza",
+      "icone": "Clapperboard"
+    },
+    {
+      "tipo": "destaque",
+      "inicio": 41.4,
+      "fim": 44.2,
+      "texto": "Ler",
+      "icone": "BookOpen"
+    },
+    {
+      "tipo": "destaque",
+      "inicio": 44.6,
+      "fim": 46.9,
+      "texto": "Falar em voz alta",
+      "icone": "Mic"
+    },
+    {
+      "tipo": "destaque",
+      "inicio": 58.6,
+      "fim": 61.0,
+      "texto": "Música",
+      "icone": "Music"
+    },
+    {
+      "tipo": "palavraAtras",
+      "inicio": 61.6,
+      "fim": 64.6,
+      "texto": "emoções"
+    },
+    {
+      "tipo": "destaque",
+      "inicio": 77.0,
+      "fim": 79.6,
+      "texto": "Cheiro de perfume",
+      "icone": "Flower2"
+    },
+    {
+      "tipo": "palavraAtras",
+      "inicio": 86.9,
+      "fim": 89.6,
+      "texto": "infância"
+    }
+  ],
+  "musicas": [],
+  "efeitos": [],
+  "encerramento": true,
+  "assinatura": "pessoal",
+  "stories": {
+    "inicio": 35.87,
+    "fim": 53.32
+  },
+  "carrossel": [
+    {
+      "titulo": "Grafirmaliza",
+      "texto": "Gratidão, afirmação\ne visualização.\nO nosso ritual diário."
+    },
+    {
+      "titulo": "Escrever,\nrevisar e ler\nem voz alta."
+    },
+    {
+      "titulo": "Quanto mais você usa\nas portas sensoriais,",
+      "texto": "mais você grava forte\nno seu subconsciente."
+    },
+    {
+      "titulo": "Música, cheiro,\nmemória.",
+      "texto": "O subconsciente trabalha com\nos gatilhos das nossas\nportas sensoriais."
+    }
+  ]
+}

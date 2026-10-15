@@ -81,6 +81,7 @@ const Destaque: React.FC<{ item: Extract<Sobreposicao, { tipo: "destaque" }>; te
         opacity: vis,
         transform: `translateY(${(1 - vis) * 24}px) scale(${0.96 + 0.04 * vis})`,
         boxShadow: "0 18px 50px rgba(0,0,0,0.25)",
+        whiteSpace: "nowrap",
       }}
     >
       {Icone && <Icone size={base * 0.058} color={cores.areia} strokeWidth={1.5} />}

@@ -16,12 +16,17 @@ export type Orador = {
   foto?: string; // diogo/fotos/foto-3.jpg
   fotoFrente?: string; // diogo/fotos/foto-3-recorte.png
   foco?: string; // CSS object-position do rosto, ex. "50% 30%"
+  escalaBase?: number; // enquadramento: >1 aproxima (gravação aberta, corpo inteiro: ~1.3–1.6)
 };
 
 // Aproxima no rosto em "em" e volta em "ate" (padrão: 2,5 s depois). Escala típica: 1.12 a 1.2.
 export type Zoom = { em: number; escala: number; ate?: number };
 
-export type Cena =
+// legenda: posição da legenda nesta cena (fração da altura) ou "esconder" (quando a animação já mostra a fala)
+type Legendavel = { legenda?: number | "esconder" };
+
+export type Cena = Legendavel &
+  (
   | { tipo: "rosto"; inicio: number; fim: number; orador?: Orador; zooms?: Zoom[] }
   | {
       tipo: "dividida";
@@ -30,10 +35,12 @@ export type Cena =
       midia?: string; // imagem ou vídeo do imóvel/projeto
       animacao?: string; // nome em src/animacoes
       palavras?: string[]; // textos usados pela animação (só o que o Diogo disse)
+      tempos?: number[]; // momentos (s, linha do tempo global) que a animação acompanha
       orador?: Orador;
     }
-  | { tipo: "telaCheia"; inicio: number; fim: number; midia?: string; animacao?: string; palavras?: string[]; titulo?: string }
-  | { tipo: "textoGrande"; inicio: number; fim: number; texto: string; rotulo?: string };
+  | { tipo: "telaCheia"; inicio: number; fim: number; midia?: string; animacao?: string; palavras?: string[]; tempos?: number[]; titulo?: string }
+  | { tipo: "textoGrande"; inicio: number; fim: number; texto: string; rotulo?: string }
+  );
 
 export type Sobreposicao =
   | { tipo: "palavraAtras"; inicio: number; fim: number; texto: string }
@@ -57,6 +64,7 @@ export type Roteiro = {
   musicas: Musica[];
   efeitos: Efeito[];
   encerramento: boolean;
+  assinatura?: "aho" | "pessoal"; // "pessoal" = sem logo da Aho (ex.: vídeos da Eixoz)
   stories?: { inicio: number; fim: number }; // trecho da versão curta
   capa?: { foto: string; titulo: string; subtitulo?: string; foco?: string };
   carrossel?: { titulo: string; texto?: string }[];

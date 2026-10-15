@@ -34,7 +34,7 @@ export const Orador: React.FC<{
     height: "100%",
     objectFit: "cover",
     objectPosition: foco,
-    transform: `scale(${escala})`,
+    transform: `scale(${escala * (orador.escalaBase ?? 1)})`,
     transformOrigin: foco,
   };
   const video = camada === "fundo" ? orador.video : orador.frente;

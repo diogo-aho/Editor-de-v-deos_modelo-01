@@ -17,6 +17,8 @@ const posicaoLegenda = (cena: Cena | undefined, formato: ReturnType<typeof forma
   const z = zonaSegura(formato);
   const limiteBase = (altura - z.base) / altura - 0.06;
   if (!cena) return null;
+  if (cena.legenda === "esconder") return null;
+  if (typeof cena.legenda === "number") return cena.legenda;
   switch (cena.tipo) {
     case "rosto": // altura do peito
       return Math.min(formato === "horizontal" ? 0.78 : 0.64, limiteBase);
@@ -70,10 +72,14 @@ const Assinatura: React.FC<{ roteiro: Roteiro }> = ({ roteiro }) => {
   const surge = (atraso: number) => suave(Math.min(1, Math.max(0, (t - atraso) / 0.7)));
   return (
     <AbsoluteFill style={{ background: c.fundo, alignItems: "center", justifyContent: "center", opacity: surge(0) }}>
-      <Img
-        src={staticFile("aho/simbolo-branco.png")}
-        style={{ width: base * 0.17, opacity: surge(0.25) * 0.95, transform: `translateY(${(1 - surge(0.25)) * 16}px)` }}
-      />
+      {roteiro.assinatura !== "pessoal" ? (
+        <Img
+          src={staticFile("aho/simbolo-branco.png")}
+          style={{ width: base * 0.17, opacity: surge(0.25) * 0.95, transform: `translateY(${(1 - surge(0.25)) * 16}px)` }}
+        />
+      ) : (
+        <div style={{ width: base * 0.12 * surge(0.25), height: 2, background: cores.madeira }} />
+      )}
       <div style={{ fontFamily: fontes.destaque, fontWeight: 600, fontSize: base * 0.075, color: cores.brancoQuente, marginTop: base * 0.05, opacity: surge(0.6) }}>
         {NOME}
       </div>

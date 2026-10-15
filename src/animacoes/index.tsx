@@ -1,18 +1,21 @@
 import React from "react";
-import { AbsoluteFill, Easing, interpolate, random, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Easing, interpolate, random, useCurrentFrame } from "remotion";
+import { useArea } from "./area";
 import { fontes, paleta, SUAVE, type Clima, type Tema } from "../marca";
+import { Filme, Grafirmaliza, PortasSensoriais, Vinil } from "./eixoz";
 
 // Animações feitas sob medida. Cada vídeo pode ganhar novas: crie aqui e registre em ANIMACOES.
 // Regra: nada de número ou dado inventado. Só o que o Diogo disse ou enviou.
 
-export type PropsAnimacao = { tema: Tema; clima: Clima; duracao: number; palavras?: string[] };
+// t0 = segundo (linha do tempo global) do primeiro quadro da animação; tempos = momentos globais da fala.
+export type PropsAnimacao = { tema: Tema; clima: Clima; duracao: number; palavras?: string[]; tempos?: number[]; t0?: number };
 
 const suave = Easing.bezier(...SUAVE);
 
 // Onda sonora elegante que vira texto: ilustra "gravação → transcrição".
 const Transcricao: React.FC<PropsAnimacao> = ({ tema, clima, palavras = [] }) => {
   const frame = useCurrentFrame();
-  const { fps, width, height } = useVideoConfig();
+  const { fps, width, height } = useArea();
   const t = frame / fps;
   const c = paleta(tema, clima);
   const barras = 46;
@@ -97,4 +100,8 @@ const Transcricao: React.FC<PropsAnimacao> = ({ tema, clima, palavras = [] }) =>
 
 export const ANIMACOES: Record<string, React.FC<PropsAnimacao>> = {
   transcricao: Transcricao,
+  grafirmaliza: Grafirmaliza,
+  filme: Filme,
+  portasSensoriais: PortasSensoriais,
+  vinil: Vinil,
 };

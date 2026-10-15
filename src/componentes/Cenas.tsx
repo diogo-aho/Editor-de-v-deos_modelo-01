@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Easing, Img, interpolate, OffthreadVideo, staticFile, useVideoConfig } from "remotion";
 import { ANIMACOES } from "../animacoes";
+import { AreaAnimacao } from "../animacoes/area";
 import { cores, fontes, formatoDe, paleta, SUAVE, type Clima, type Tema } from "../marca";
 import type { Cena, Orador as OradorT, Sobreposicao } from "../tipos";
 import { escalaNoTempo, Orador, useTempo } from "./Orador";
@@ -34,14 +35,14 @@ export const Midia: React.FC<{ arquivo: string; inicio: number; fim: number; ini
 };
 
 const Ilustracao: React.FC<{
-  cena: { midia?: string; animacao?: string; palavras?: string[]; inicio: number; fim: number };
+  cena: { midia?: string; animacao?: string; palavras?: string[]; tempos?: number[]; inicio: number; fim: number };
   tema: Tema;
   clima: Clima;
   inicioSeq: number;
 }> = ({ cena, tema, clima, inicioSeq }) => {
   if (cena.animacao && ANIMACOES[cena.animacao]) {
     const Anim = ANIMACOES[cena.animacao];
-    return <Anim tema={tema} clima={clima} duracao={cena.fim - cena.inicio} palavras={cena.palavras} />;
+    return <Anim tema={tema} clima={clima} duracao={cena.fim - cena.inicio} palavras={cena.palavras} tempos={cena.tempos} t0={inicioSeq} />;
   }
   if (cena.midia) return <Midia arquivo={cena.midia} inicio={cena.inicio} fim={cena.fim} inicioSeq={inicioSeq} />;
   return <AbsoluteFill style={{ background: paleta(tema, clima).fundo }} />;
@@ -85,7 +86,9 @@ export const CenaDividida: React.FC<Comum & { cena: Extract<Cena, { tipo: "divid
   return (
     <AbsoluteFill style={{ background: paleta(tema, clima).fundo }}>
       <div style={{ ...metade, ...(horizontal ? { left: 0 } : { top: 0 }), overflow: "hidden" }}>
-        <Ilustracao cena={cena} tema={tema} clima={clima} inicioSeq={inicioSeq} />
+        <AreaAnimacao width={horizontal ? width / 2 : width} height={horizontal ? height : height / 2}>
+          <Ilustracao cena={cena} tema={tema} clima={clima} inicioSeq={inicioSeq} />
+        </AreaAnimacao>
       </div>
       <div style={{ ...metade, ...(horizontal ? { right: 0 } : { bottom: 0 }), overflow: "hidden" }}>
         <Orador orador={orador} camada="fundo" inicioCena={inicioSeq} escala={1.02 + 0.03 * abre} />
