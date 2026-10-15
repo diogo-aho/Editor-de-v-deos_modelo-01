@@ -57,7 +57,12 @@ na linha do tempo já cortada. Monte assim:
   - Ritmo médio: troque de cena a cada ~3–6 s; deixe respiro em momentos emocionais.
 - **Destaques na legenda:** marque `"destaque": true` em 1 palavra-chave a cada ~5–8 s.
 - **Sobreposições** (`sobreposicoes`): `destaque` (cartão com ícone lucide), `palavraAtras`
-  (palavra gigante atrás dele), `numero` (**só números que ele disse**).
+  (palavra gigante atrás dele), `numero` (**só números que ele disse**), `correcao`
+  ("nota do editor" quando ele fala um nome errado; a legenda continua com o que ele disse).
+- **Legenda por cena:** `"legenda": 0.72` muda a altura; `"legenda": "esconder"` quando a animação
+  já mostra as palavras. Gravação aberta (corpo inteiro): use `orador.escalaBase` (~1.3–1.6) e
+  varie entre cenas seguidas para dar ritmo.
+- **Legenda do post e DM:** escreva em `public/projetos/<nome>/post.md` e mostre ao Diogo.
 - **Animações sob medida:** crie em `src/animacoes/index.tsx` e registre em `ANIMACOES`.
   Mapas, gráficos, linhas do tempo… Elegantes, nunca chamativas. Nada de dado inventado.
 - **Música** (`musicas`): faixas do Artlist em `public/musicas/`. Troque a faixa quando a cena

@@ -1251,7 +1251,7 @@
       "fim": 78.21
     },
     {
-      "palavra": "talo",
+      "palavra": "Ítalo",
       "inicio": 78.21,
       "fim": 78.51
     },
@@ -1311,12 +1311,12 @@
       "fim": 82.25
     },
     {
-      "palavra": "\"estás",
+      "palavra": "tá",
       "inicio": 82.25,
       "fim": 82.52
     },
     {
-      "palavra": "estressado\"",
+      "palavra": "estressado",
       "inicio": 82.52,
       "fim": 83.06
     },
@@ -1592,11 +1592,12 @@
       },
       "zooms": [
         {
-          "em": 21.0,
-          "escala": 1.15,
-          "ate": 24.4
+          "em": 18.3,
+          "escala": 1.12,
+          "ate": 20.9
         }
-      ]
+      ],
+      "legenda": 0.72
     },
     {
       "tipo": "telaCheia",
@@ -1792,6 +1793,13 @@
       "fim": 20.6,
       "texto": "Joe Dispenza",
       "icone": "Clapperboard"
+    },
+    {
+      "tipo": "correcao",
+      "inicio": 21.25,
+      "fim": 24.3,
+      "errado": "MindVision",
+      "certo": "Mind Movie"
     },
     {
       "tipo": "destaque",

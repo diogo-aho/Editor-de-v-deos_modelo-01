@@ -45,6 +45,8 @@ export type Cena = Legendavel &
 export type Sobreposicao =
   | { tipo: "palavraAtras"; inicio: number; fim: number; texto: string }
   | { tipo: "destaque"; inicio: number; fim: number; texto: string; icone?: string; lado?: "esquerda" | "direita" }
+  // Corrige com leveza algo que o Diogo falou errado (a legenda mantém o que ele disse).
+  | { tipo: "correcao"; inicio: number; fim: number; errado: string; certo: string; nota?: string }
   // Só com números que o Diogo disse ou enviou. Nunca inventar.
   | { tipo: "numero"; inicio: number; fim: number; valor: number; prefixo?: string; sufixo?: string; rotulo?: string };
 

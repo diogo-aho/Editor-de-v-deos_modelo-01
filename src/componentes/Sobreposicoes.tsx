@@ -92,6 +92,52 @@ const Destaque: React.FC<{ item: Extract<Sobreposicao, { tipo: "destaque" }>; te
   );
 };
 
+// "Nota do editor": a palavra errada balança como quem diz "não", leva um risco, e a certa entra.
+const Correcao: React.FC<{ item: Extract<Sobreposicao, { tipo: "correcao" }> }> = ({ item }) => {
+  const { width, height } = useVideoConfig();
+  const t = useTempo();
+  const vis = entradaSaida(t, item.inicio, item.fim, 0.4);
+  if (vis <= 0) return null;
+  const base = Math.min(width, height);
+  const dt = t - item.inicio;
+  const balanca = dt > 0.45 && dt < 1.0 ? Math.sin((dt - 0.45) * Math.PI * 7) * (1 - (dt - 0.45) / 0.55) * 7 : 0;
+  const risco = suave(Math.min(1, Math.max(0, (dt - 1.0) / 0.35)));
+  const certo = suave(Math.min(1, Math.max(0, (dt - 1.35) / 0.45)));
+  const check = suave(Math.min(1, Math.max(0, (dt - 1.75) / 0.3)));
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: "50%",
+        top: height * 0.435,
+        translate: "-50% 0",
+        padding: `${base * 0.035}px ${base * 0.06}px`,
+        borderRadius: base * 0.035,
+        background: "rgba(30, 28, 26, 0.5)",
+        border: "1px solid rgba(244, 239, 231, 0.22)",
+        backdropFilter: "blur(14px)",
+        boxShadow: "0 18px 50px rgba(0,0,0,0.3)",
+        textAlign: "center",
+        whiteSpace: "nowrap",
+        opacity: vis,
+        transform: `translateY(${(1 - vis) * 20}px)`,
+      }}
+    >
+      <div style={{ fontFamily: fontes.texto, fontWeight: 600, fontSize: base * 0.022, letterSpacing: "0.3em", color: cores.madeira, marginBottom: base * 0.018 }}>
+        {(item.nota ?? "nota do editor").toUpperCase()}
+      </div>
+      <div style={{ position: "relative", display: "inline-block", fontFamily: fontes.texto, fontWeight: 600, fontSize: base * 0.048, color: cores.areia, opacity: 1 - 0.45 * risco, transform: `rotate(${balanca}deg)` }}>
+        {item.errado}
+        <div style={{ position: "absolute", left: "-4%", top: "50%", width: `${108 * risco}%`, height: 5, background: cores.madeira, transform: "rotate(-4deg)", borderRadius: 3, boxShadow: "0 0 8px rgba(167,116,74,0.6)" }} />
+      </div>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: base * 0.02, marginTop: base * 0.012, opacity: certo, transform: `translateY(${(1 - certo) * 14}px)` }}>
+        <span style={{ fontFamily: fontes.destaque, fontStyle: "italic", fontWeight: 600, fontSize: base * 0.085, color: cores.brancoQuente }}>{item.certo}</span>
+        <Icones.Check size={base * 0.05} color={cores.madeira} strokeWidth={2.2} style={{ opacity: check, transform: `scale(${0.6 + 0.4 * check})` }} />
+      </div>
+    </div>
+  );
+};
+
 // Número que conta até o valor. SÓ com números ditos ou enviados pelo Diogo.
 const Numero: React.FC<{ item: Extract<Sobreposicao, { tipo: "numero" }>; tema: Tema; clima: Clima }> = ({ item, tema, clima }) => {
   const { width, height } = useVideoConfig();
@@ -126,6 +172,8 @@ export const Sobreposicoes: React.FC<{ itens: Sobreposicao[]; tema: Tema; clima:
     {itens.map((item, i) =>
       item.tipo === "destaque" ? (
         <Destaque key={i} item={item} tema={tema} clima={clima} />
+      ) : item.tipo === "correcao" ? (
+        <Correcao key={i} item={item} />
       ) : item.tipo === "numero" ? (
         <Numero key={i} item={item} tema={tema} clima={clima} />
       ) : null,

@@ -103,3 +103,6 @@ Formato: `AAAA-MM-DD — regra — (vídeo de origem)`
 
 - 2026-10-15 — Formato definido na entrevista inicial (tudo acima). — (entrevista)
 - 2026-10-15 — Toda mensagem para o Diogo é em português, sem exceção (ele não lê inglês). — (eixoz-01)
+- 2026-10-15 — Quando o Diogo falar um nome errado, a legenda mantém o que ele disse e entra uma "nota do editor" (sobreposição `correcao`) corrigindo com leveza e um toque de humor. Ex.: "MindVision" → "Mind Movie". — (eixoz-01)
+- 2026-10-15 — Vídeos da Eixoz: assinatura "pessoal" (sem logo da Aho) até a identidade da Eixoz ficar pronta. Podem ter mais animações sob medida. — (eixoz-01)
+- 2026-10-15 — Vídeo pode passar de 90 s quando o Diogo fala sem pausas: manter inteiro, não cortar conteúdo sem ele pedir. — (eixoz-01)
