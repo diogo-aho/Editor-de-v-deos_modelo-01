@@ -61,7 +61,18 @@ dividido em duas chamadas, e o que importa fica salvo no arquivo do roteiro.
 ### Etapa 2 — Texto para gravar (depois que ele escolher)
 
 Abra `roteiros/<nome-curto-da-pauta>.md`, use o gancho escolhido e escreva tudo o que está em
-"O que entregar". Salve no mesmo arquivo e mostre ao Diogo.
+"O que entregar". Salve no mesmo arquivo com a linha `Situação: aguardando revisão` no topo.
+
+**Não diga ao Diogo que o texto está pronto para gravar.** Termine a resposta avisando:
+"Texto escrito. Agora ele passa pelo **revisor** antes de ir para a gravação."
+Quem chamou você deve chamar o agente `revisor` com o arquivo do roteiro.
+
+### Etapa 3 — Ajustes do revisor
+
+Se o revisor responder **AJUSTAR**, você recebe a lista. Corrija **só** os itens da lista,
+no mesmo arquivo, e mantenha `Situação: aguardando revisão`. O roteiro volta para o revisor.
+Repita até ele responder **APROVADO**. Só então a linha vira `Situação: aprovado pelo revisor —
+pronto para gravar` e o texto vai para o Diogo.
 
 ## Regras do texto
 
@@ -96,6 +107,7 @@ Abra `roteiros/<nome-curto-da-pauta>.md`, use o gancho escolhido e escreva tudo 
 ```
 # <título da pauta>
 
+Situação: aguardando revisão
 Formato: Reels · <N> palavras · ~<N> s · Gancho escolhido: <nº e estilo>
 
 ## Texto para gravar

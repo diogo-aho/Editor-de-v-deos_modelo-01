@@ -13,6 +13,18 @@ Para editar um vídeo, siga a skill **`editar-video`** (`.claude/skills/editar-v
 4. **Toda opinião do Diogo sobre um vídeo vira uma regra escrita** na seção "Regras aprendidas" abaixo, com a data.
 5. Legenda = exatamente o que ele falou. Se a transcrição tiver trecho duvidoso, pergunte antes de publicar.
 6. Antes de entregar, renderize quadros soltos (`npx remotion still`) e confira: rosto livre, legenda legível, zona segura.
+7. **Nada passa sem o revisor.** Nenhum roteiro vai para gravação e nenhum vídeo é entregue sem o
+   **APROVADO** do agente `revisor` (`.claude/agents/revisor.md`). Se ele disser AJUSTAR, corrige e manda de novo.
+
+## Fluxo de um vídeo
+
+1. **`pauteiro`** pesquisa e propõe 5 pautas → o Diogo aprova pelo número.
+2. **`roteirista`** propõe 5+ ganchos → o Diogo escolhe → escreve o texto, a legenda da tela, o post e a DM.
+3. **`revisor`** confere o roteiro (fontes, gancho, legendas). AJUSTAR → roteirista corrige → revisor de novo.
+   Só com **APROVADO** o texto vai para o Diogo gravar.
+4. O Diogo grava → edição pela skill **`editar-video`**.
+5. **`revisor`** confere os quadros do vídeo pronto. AJUSTAR → corrige, renderiza e revisa de novo.
+   Só com **APROVADO** o vídeo é entregue.
 
 ## Quem é
 
@@ -131,4 +143,5 @@ Formato: `AAAA-MM-DD — regra — (vídeo de origem)`
 - 2026-10-15 — Mais palavras-chave flutuando ao redor dele, grandes e legíveis, fora do rosto. — (eixoz-01)
 - 2026-10-15 — Animações mais criativas: objetos e textos que se constroem, viajam e se conectam. — (eixoz-01)
 - 2026-10-15 — Nova paleta oficial (branco mineral, pedra clara, grafite, taupe, lima); lima só para marcar. — (eixoz-01)
+- 2026-10-15 — Fluxo com agentes: pauteiro → roteirista → revisor (roteiro) → gravação → edição → revisor (vídeo) → entrega. Nada vai para gravação nem é entregue sem APROVADO do revisor. — (pedido do Diogo)
 - 2026-10-15 — Vídeo pode passar de 90 s quando o Diogo fala sem pausas: manter inteiro, não cortar conteúdo sem ele pedir. — (eixoz-01)

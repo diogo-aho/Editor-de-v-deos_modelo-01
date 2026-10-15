@@ -13,7 +13,8 @@ Para detalhes de Remotion, use a skill `remotion-best-practices`.
 - Gravação (vídeo do iPhone ou áudio), fotos/vídeos do imóvel, prints, imagens dos projetos.
   Podem vir anexados ou por link do Google Drive (`gdown`). Referências do Instagram: `yt-dlp`.
 - Guarde os brutos em `brutos/<nome>/` (fora do Git) e as mídias de apoio em `public/projetos/<nome>/midia/`.
-- Pergunte só o que faltar: **formato(s)**, **legenda do post** e **mensagem da DM** (sempre perguntar),
+- Se o vídeo saiu de um roteiro em `roteiros/`, use a legenda do post e a DM de lá (já revisadas).
+- Pergunte só o que faltar: **formato(s)**, **legenda do post** e **mensagem da DM** (sempre perguntar, se não houver roteiro),
   **foto da capa**, e se é um assunto energético (esporte) ou calmo.
 - **Nunca peça para regravar.**
 
@@ -82,7 +83,7 @@ npx remotion still src/index.ts Reels out/q.png --frame=<n> --props=public/proje
 Confira: rosto livre, cartões fora do rosto, legenda legível e fora da zona dos botões,
 nada importante no topo/base/lateral direita, nenhuma palavra cortada.
 
-## 5. Renderizar e entregar
+## 5. Renderizar
 
 ```bash
 python scripts/entregar.py <nome>                                      # padrão: só o Reels (+ capa)
@@ -92,10 +93,21 @@ Gera em `out/<nome>/`: os vídeos, `capa.png` (e `capa-youtube.png`) e `carrosse
 Vídeos acima de 30 MB ganham uma cópia `*-para-postar.mp4` (<30 MB): é ela que se envia na conversa (limite de 30 MB).
 Para um só formato: `npx remotion render src/index.ts Reels out/x.mp4 --props=public/projetos/<nome>/roteiro.json`.
 
+## 6. Revisão final (obrigatória)
+
+**Nenhum vídeo é entregue sem o APROVADO do agente `revisor`.** Chame o `revisor` com o nome do
+projeto (ele confere os quadros do vídeo pronto em `out/<nome>/`).
+
+- **AJUSTAR** → corrija cada item da lista no `roteiro.json` (ou no código), renderize de novo e
+  chame o `revisor` outra vez. Repita até vir **APROVADO**.
+- **APROVADO** → siga para a entrega.
+
+## 7. Entregar
+
 Mande os arquivos ao Diogo com um resumo curto em português e **a legenda do post e a DM**
 que ele pediu. Faça commit do roteiro e do código (mídias grandes ficam fora do Git).
 
-## 6. Depois da opinião do Diogo
+## 8. Depois da opinião do Diogo
 
 Toda opinião dele vira regra em `CLAUDE.md` → "Regras aprendidas", com a data:
 `2026-10-20 — legenda um pouco maior nos vídeos de rua — (vídeo "pinheiros-01")`.
