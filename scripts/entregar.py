@@ -52,7 +52,8 @@ ff = imageio_ffmpeg.get_ffmpeg_exe()
 for video in list(saida.glob("*.mp4")):
     if video.stem.endswith("-para-postar") or video.stat().st_size < 30 * 1024 * 1024:
         continue
-    dur = float(re.search(r"Duration: (\d+):(\d+):([\d.]+)", subprocess.run([ff, "-i", str(video)], capture_output=True, text=True).stderr).groups()[2])
+    h, m, seg = re.search(r"Duration: (\d+):(\d+):([\d.]+)", subprocess.run([ff, "-i", str(video)], capture_output=True, text=True).stderr).groups()
+    dur = int(h) * 3600 + int(m) * 60 + float(seg)
     kbps = int(28 * 8 * 1024 / dur - 140)
     leve = video.with_name(video.stem + "-para-postar.mp4")
     log = str(saida / "_passe")
