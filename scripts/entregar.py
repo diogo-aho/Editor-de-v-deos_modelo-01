@@ -4,7 +4,7 @@ Uso: python scripts/entregar.py <nome> [--formatos reels,feed,youtube,stories] [
 
 Saída em out/<nome>/: reels.mp4, feed.mp4, youtube.mp4, stories.mp4, capa.png, carrossel-1.png...
 """
-import argparse, json, subprocess, sys, tempfile
+import argparse, json, re, subprocess, sys, tempfile
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -45,6 +45,23 @@ if roteiro.get("carrossel") and not a.sem_carrossel:
             json.dump({**roteiro, "pagina": i}, tmp, ensure_ascii=False)
         remotion("still", "src/index.ts", "Carrossel", str(saida / f"carrossel-{i + 1}.png"), f"--props={tmp.name}")
         Path(tmp.name).unlink()
+
+# Cópia leve (<30 MB) para enviar pela conversa; o Instagram recomprime de qualquer jeito.
+import imageio_ffmpeg
+ff = imageio_ffmpeg.get_ffmpeg_exe()
+for video in list(saida.glob("*.mp4")):
+    if video.stem.endswith("-para-postar") or video.stat().st_size < 30 * 1024 * 1024:
+        continue
+    dur = float(re.search(r"Duration: (\d+):(\d+):([\d.]+)", subprocess.run([ff, "-i", str(video)], capture_output=True, text=True).stderr).groups()[2])
+    kbps = int(28 * 8 * 1024 / dur - 140)
+    leve = video.with_name(video.stem + "-para-postar.mp4")
+    log = str(saida / "_passe")
+    subprocess.run([ff, "-loglevel", "error", "-y", "-i", str(video), "-c:v", "libx264", "-preset", "slow", "-b:v", f"{kbps}k",
+                    "-pass", "1", "-passlogfile", log, "-an", "-f", "null", "-"], check=True)
+    subprocess.run([ff, "-loglevel", "error", "-y", "-i", str(video), "-c:v", "libx264", "-preset", "slow", "-b:v", f"{kbps}k",
+                    "-pass", "2", "-passlogfile", log, "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(leve)], check=True)
+    for f in saida.glob("_passe*"):
+        f.unlink()
 
 print(f"Pronto: {saida.relative_to(RAIZ)}/")
 for arq in sorted(saida.iterdir()):

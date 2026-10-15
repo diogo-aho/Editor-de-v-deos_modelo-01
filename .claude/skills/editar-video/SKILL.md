@@ -88,6 +88,7 @@ python scripts/entregar.py <nome> --formatos reels,stories            # padrão
 python scripts/entregar.py <nome> --formatos reels,feed,youtube,stories
 ```
 Gera em `out/<nome>/`: os vídeos, `capa.png` (e `capa-youtube.png`) e `carrossel-N.png`.
+Vídeos acima de 30 MB ganham uma cópia `*-para-postar.mp4` (<30 MB): é ela que se envia na conversa (limite de 30 MB).
 Para um só formato: `npx remotion render src/index.ts Reels out/x.mp4 --props=public/projetos/<nome>/roteiro.json`.
 
 Mande os arquivos ao Diogo com um resumo curto em português e **a legenda do post e a DM**
