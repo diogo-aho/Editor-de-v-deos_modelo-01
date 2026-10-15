@@ -102,3 +102,4 @@ projetos e vídeos à parte. O iPhone grava em HDR: `preparar.py` converte para 
 Formato: `AAAA-MM-DD — regra — (vídeo de origem)`
 
 - 2026-10-15 — Formato definido na entrevista inicial (tudo acima). — (entrevista)
+- 2026-10-15 — Toda mensagem para o Diogo é em português, sem exceção (ele não lê inglês). — (eixoz-01)
